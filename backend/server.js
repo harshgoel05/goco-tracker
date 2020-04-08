@@ -4,10 +4,9 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const app = express();
-
 const MongoClient = require("mongodb").MongoClient;
-const dburl =
-	"mongodb+srv://hackon:hackon123@cluster0-x5lvb.mongodb.net/test?retryWrites=true&w=majority";
+// Connecting to MongoDB using MongoClient
+const dburl = "mongodb+srv://hackon:hackon123@cluster0-x5lvb.mongodb.net/test?retryWrites=true&w=majority";
 const client = new MongoClient(dburl, { useNewUrlParser: true });
 
 client.connect((err, db) => {
@@ -16,9 +15,11 @@ client.connect((err, db) => {
 	} else {
 		console.log("Connected to Database");
 		database = db.db("admin").collection("admincoll");
-		console.log(database);
+		// console.log(database);
 	}
 });
+// Connecting to MongoEnds
+
 app.use(bodyParser.json());
 app.use(
 	bodyParser.urlencoded({
