@@ -1,0 +1,13 @@
+const mongoose = require("mongoose");
+
+const Schema = mongoose.Schema;
+const storeSchema = new Schema({
+	name: String,
+	category: String,
+	contactno: String,
+	address: String,
+	city: String,
+	state: String,
+	pincode: String,
+});
+module.exports = mongoose.model("store", storeSchema);

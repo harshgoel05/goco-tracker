@@ -7,17 +7,14 @@ const app = express();
 const MongoClient = require("mongodb").MongoClient;
 // Connecting to MongoDB using MongoClient
 const dburl = "mongodb+srv://hackon:hackon123@cluster0-x5lvb.mongodb.net/test?retryWrites=true&w=majority";
-const client = new MongoClient(dburl, { useNewUrlParser: true });
-
-client.connect((err, db) => {
-	if (err) {
-		console.log("Error: ", err);
-	} else {
-		console.log("Connected to Database");
-		database = db.db("admin").collection("admincoll");
-		// console.log(database);
-	}
-});
+mongoose
+	.connect(dburl)
+	.then(() => {
+		console.log("Database connection successful");
+	})
+	.catch((err) => {
+		console.error("Database connection error");
+	});
 // Connecting to MongoEnds
 
 app.use(bodyParser.json());
@@ -27,12 +24,12 @@ app.use(
 	})
 );
 app.use(cors());
+const port = process.env.PORT;
+const server = app.listen(port, () => {
+	console.log("Connected to port " + port);
+});
 
 // Routes
 const apiroutings = require("./routes/routes");
 app.use("/api", apiroutings);
 // Create a port
-const port = process.env.PORT;
-const server = app.listen(port, () => {
-	console.log("Connected to port " + port);
-});
