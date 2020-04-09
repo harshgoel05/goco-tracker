@@ -6,7 +6,7 @@ require("dotenv").config();
 const app = express();
 const MongoClient = require("mongodb").MongoClient;
 // Connecting to MongoDB using MongoClient
-const dburl = "mongodb+srv://hackon:hackon123@cluster0-x5lvb.mongodb.net/test?retryWrites=true&w=majority";
+const dburl = "mongodb+srv://hackon:hackon123@cluster0-x5lvb.mongodb.net/Hackon?retryWrites=true&w=majority";
 mongoose
 	.connect(dburl)
 	.then(() => {

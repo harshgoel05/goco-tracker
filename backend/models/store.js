@@ -10,4 +10,4 @@ const storeSchema = new Schema({
 	state: String,
 	pincode: String,
 });
-module.exports = mongoose.model("store", storeSchema);
+module.exports = mongoose.model("store", storeSchema, "StoreDb");
