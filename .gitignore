@@ -2,3 +2,5 @@
 /backend/node_modules
 /GoCoTracker/node_modules
 /backend/.env
+/client/node_modules
+/stats/node_modules
