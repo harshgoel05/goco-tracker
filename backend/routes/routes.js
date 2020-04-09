@@ -5,15 +5,15 @@ const axios = require("axios");
 
 /*
 INDEX
-1. Add stores to Database
-2. Get all the stores from the Database
-3. To get the no of counting stats of patients in INDIA ( not tallying with  John wala data)
-4. To get the no of hospitals and beds
-5. To get the helpline contacts
-6. To get the Notifications by officials
-7. WORLD DATA
-8. World Data Country Wise
-9. World Data Country Wise
+1. Add stores to Database                                                Working
+2. Get all the stores from the Database									 Working
+3. State wise in India (less than 5916 )								 Not Working
+4. To get the no of hospitals and beds									 Working
+5. To get the helpline contacts											 Working
+6. To get the Notifications by officials								 Working
+7. WORLD DATA															 Working
+8. World Data Country Wise (5916)										 Working
+9. World Data India TimeLine (5916) 									 Working
 
 */
 
@@ -50,7 +50,7 @@ Routes.route("/getstores").get((req, res) => {
 // To get the no of counting stats of patients in INDIA
 Routes.route("/covidIndiaPatientCountStats").get((req, response) => {
 	try {
-		axios.get("https://api.rootnet.in/covid19-in/stats/latest").then((res) => {
+		axios.get("https://api.covid19india.org/data.json").then((res) => {
 			// console.log(res.data.data);
 			response.status(200).send(res.data.data);
 		});
@@ -59,18 +59,7 @@ Routes.route("/covidIndiaPatientCountStats").get((req, response) => {
 		response.status(500).send(err);
 	}
 });
-// Confirmed Patients COORDINATES IN INDIA
-Routes.route("/covidIndiaPatientCountStats").get((req, response) => {
-	try {
-		axios.get("https://api.covid19api.com/country/india/status/confirmed/live").then((res) => {
-			// console.log(res.data.data);
-			response.status(200).send(res.data.data);
-		});
-	} catch (err) {
-		// console.error(err);
-		response.status(500).send(err);
-	}
-});
+
 // To get the no of hospitals and beds
 Routes.route("/covidIndiaHospitalBeds").get((req, response) => {
 	try {
@@ -132,10 +121,11 @@ Routes.route("/covidWorldCountryWise").get((req, response) => {
 		response.status(500).send(err);
 	}
 });
-// World Data Histocial
+
+// India Data Timeline
 Routes.route("/covidWorldHistory").get((req, response) => {
 	try {
-		axios.get("https://corona.lmao.ninja/v2/historical").then((res) => {
+		axios.get("https://thevirustracker.com/free-api?countryTimeline=IN").then((res) => {
 			console.log(res.data);
 			response.status(200).send(res.data);
 		});
