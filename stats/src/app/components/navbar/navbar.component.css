@@ -1,4 +1,4 @@
-nav,
+/* nav,
 .navbar {
   background-color: rgba(245, 97, 51, 0.5) !important;
 }
@@ -11,11 +11,11 @@ nav,
 }
 .active {
   border: 0px 0px 10px solid #000;
-}
+} */
 
 /* Icon 1 */
 
-.animated-icon2 {
+/* .animated-icon2 {
   width: 30px;
   height: 20px;
   position: relative;
@@ -100,4 +100,41 @@ nav,
   top: 11px;
   width: 0%;
   left: 50%;
+} */
+.navbar{
+  background-color: transparent;
+  
+}
+.navbar-end a{
+  
+  font-weight: 400;
+  font-size: 20px;
+}
+.navbar-end a:hover
+{
+  border-bottom: solid 2px #f56133;
+  background: inherit;
+}
+
+.log{
+  height: 50px;
+  width: 50px;
+}
+.navbar-item{
+  padding-left: 10px;
+}
+
+a:link{
+  color: #f56133;
+
+}
+a:hover{
+  text-decoration: none;
+}
+a:active{
+  color: black;
+}
+a:visited{
+  color: #f56133;
+  
 }

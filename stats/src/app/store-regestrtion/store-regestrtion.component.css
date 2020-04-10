@@ -1,11 +1,9 @@
 .main{
-    background-image: url(../../../assets/regester_.png);
+    background-image: url(../../assets/images/regester_.png);
     height: 100vh;
-    
     background-repeat: no-repeat;
     
 }
-
 
 
 .leftbox { 
@@ -17,7 +15,7 @@
 
 .image{
     height: 80vh;
-    margin-top: 22%;
+    margin-top: 9%;
     margin-left: 25%;
 }
 .middlebox{ 
@@ -26,7 +24,7 @@
     width:50%; 
    
     margin-left: 15vw;
-    margin-top: 80px;
+    margin-top: 20px;
     
     box-shadow: 1px 8px 20px grey;
 } 
@@ -43,7 +41,7 @@
 
 @media screen and (max-width: 1060px) {
     .main{
-        background-image: url(../../../assets/ipad-bg-1.png);
+        background-image: url(../../assets/images/ipad-bg-1.png);
         width: 100vw;
         
        
@@ -61,7 +59,7 @@
 @media screen and (max-width: 776px) {
    
     .main{
-        background-image: url(../../../assets/ipad-bg-1.png);
+        background-image: url(../../assets/images/ipad-bg-1.png);
         width: 100vw;
         overflow-x: scroll;
        
