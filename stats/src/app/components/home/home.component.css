@@ -220,4 +220,10 @@ hr {
     margin-bottom: 40px;
     text-align: center;
   }
+  .gc-button {
+    margin-bottom: 20px;
+  }
+  .gc-facts {
+    text-align: center;
+  }
 }
