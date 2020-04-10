@@ -1,0 +1,223 @@
+/* MAIN START */
+* {
+  overflow: hidden;
+}
+#landing img {
+  max-width: 90%;
+}
+#landing .firstcol {
+  background: rgba(245, 97, 51, 0.5);
+  text-align: center;
+}
+
+#landing .gc-hero-text h1 {
+  color: rgb(245, 97, 51);
+  font-family: "Lato", sans-serif;
+  font-weight: 625;
+  font-size: 100px;
+  padding-top: 75px;
+  text-align: center;
+  margin-bottom: 0;
+}
+#landing .gc-hero-text p {
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: lowercase;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+#landing .gc-get-started {
+  background-color: rgba(245, 97, 51, 1);
+  border-radius: 15px;
+  border-width: 0px;
+  color: white;
+  font-size: 24px;
+  padding: 10px 20px;
+  transition: 0.19s ease-in all;
+}
+#landing .gc-get-started:hover {
+  background-color: rgb(216, 85, 45);
+  box-shadow: 7px 5px 3px 7px rgba(189, 140, 126, 0.226);
+}
+/* MAIN END */
+/* CAROUSEL START */
+hr {
+  background-color: rgba(245, 97, 51, 1);
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 30px;
+}
+.gc-c {
+  color: rgba(245, 97, 51, 1);
+}
+.gc-corona-img {
+  text-align: center;
+  margin: auto;
+  width: 60%;
+}
+.gc-corona-text {
+  margin-top: 40px;
+}
+.gc-corona-text h1 {
+  margin-bottom: 70px;
+}
+.symptomsrow img {
+  max-width: 40%;
+}
+.symptomsrow p {
+  font-weight: 600;
+  margin-top: 20px;
+}
+.avoidrow img {
+  max-width: 55%;
+}
+.avoidrow p {
+  font-weight: 600;
+  margin-top: 20px;
+}
+.carousel-item {
+  min-height: 300px;
+}
+.carousel-indicators li {
+  background-color: rgb(166, 77, 13);
+  height: 4px;
+}
+.carousel-indicators {
+  bottom: -40px;
+}
+.carousel-control-prev-icon {
+  background: url(../../../assets/images/home/left-arrow.svg);
+  color: black;
+}
+.carousel-control-next-icon {
+  background: url(../../../assets/images/home/right-arrow.svg);
+  color: black;
+}
+/* CARROUSEL END*/
+/* FACTS START */
+
+.gc-facts-text h1 {
+  font-size: 50px;
+  margin-top: 140px;
+  margin-bottom: 40px;
+}
+.gc-facts img {
+  width: 80%;
+}
+.gc-f {
+  color: rgba(245, 97, 51, 1);
+}
+.gc-button {
+  color: white;
+  margin: auto;
+  display: block;
+  background-color: rgba(245, 97, 51, 1);
+  border-radius: 15px;
+  border: none;
+  font-size: 24px;
+  padding: 10px 20px;
+  transition: 0.19s ease-in all;
+}
+.gc-button:hover {
+  background-color: rgb(216, 85, 45);
+  box-shadow: 7px 5px 3px 7px rgba(189, 140, 126, 0.226);
+}
+.gc-e {
+  color: rgba(245, 97, 51, 1);
+}
+.gc-store {
+  color: white;
+  font-size: 35px;
+  border-radius: 10px;
+  background-color: rgba(245, 97, 51, 1);
+  border-style: none;
+  margin: auto;
+  display: block;
+}
+.gc-grocery-text h3 {
+  margin-left: 10px;
+  text-align: justify;
+  font-size: 50px;
+}
+.gc-store-button {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.gc-check-button {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.gc-grocery-text h1 {
+  font-size: 65px;
+}
+
+.gc-grocery-text p {
+  font-size: 30px;
+}
+.gc-app {
+  color: white;
+  font-size: 35px;
+  border-radius: 10px;
+  background-color: rgba(245, 97, 51, 1);
+  border-style: none;
+  margin: auto;
+  display: block;
+}
+.gc-n {
+  color: rgba(245, 97, 51, 1);
+}
+.gc-appointment h1 {
+  text-align: center;
+  font-size: 50px;
+}
+.gc-appointment-button {
+  font-size: 40px;
+}
+.br {
+  line-height: 125px;
+}
+@media (max-width: 800px) {
+  #landing .gc-hero-text h1 {
+    font-size: 50px;
+    padding-top: 0px;
+  }
+  #landing .gc-hero-text p {
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: lowercase;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  #landing .gc-get-started {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  #landing img {
+    display: none;
+  }
+  .gc-corona-text {
+    text-align: center;
+    padding: 0 30px;
+  }
+  .gc-corona-img {
+    width: 30%;
+  }
+  .gc-corona-text h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+  .symptomsrow img {
+    max-width: 30%;
+  }
+  .avoidrow img {
+    max-width: 20%;
+  }
+  .gc-facts-text h1 {
+    font-size: 34px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}

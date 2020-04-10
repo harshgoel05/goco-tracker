@@ -7,7 +7,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { CountriesComponent } from './components/countries/countries.component';
 import {HttpClientModule} from '@angular/common/http';
-import { AddStoreComponent } from './add-store/add-store.component'
+import { AddStoreComponent } from './add-store/add-store.component';
+import { DoctordashboardComponent } from './doctordashboard/doctordashboard.component';
+import { CommonfooterComponent } from './commonfooter/commonfooter.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { AddStoreComponent } from './add-store/add-store.component'
     NavbarComponent,
     HomeComponent,
     CountriesComponent,
-    AddStoreComponent
+    AddStoreComponent,
+    DoctordashboardComponent,
+    CommonfooterComponent
   ],
   imports: [
     BrowserModule,
