@@ -29,23 +29,24 @@ span {
 form {
   margin-top: 40px;
 }
-form button {
+form .btn-submit {
   background: #f56133;
   transition: 0.25s ease-in all;
   color: white;
   width: 30%;
   margin-top: 15px;
 }
+form .btn-submit:hover,
+form .btn-submit:active,
+form .btn-submit:focus {
+  background-color: #c94016;
+  box-shadow: 7px 4px 4px 2px rgba(109, 51, 17, 0.284);
+}
 form label {
   font-size: 19px;
   font-weight: 400;
 }
-form button:hover,
-form button:active,
-form button:focus {
-  background-color: #c94016;
-  box-shadow: 7px 4px 4px 2px rgba(109, 51, 17, 0.284);
-}
+
 form input:hover,
 form input:active,
 form input:focus {
@@ -61,4 +62,19 @@ form input:focus {
   form button {
     width: 45%;
   }
+}
+form .btn-back {
+  background: none;
+  transition: 0.25s ease-in all;
+  color: #c94016;
+  width: 30%;
+  margin-top: 15px;
+  border: 1px solid #c94016;
+}
+form .btn-back:hover,
+form .btn-back:active,
+form .btn-back:focus {
+  background-color: #c94016;
+  color: white;
+  box-shadow: 7px 4px 4px 2px rgba(109, 51, 17, 0.284);
 }
