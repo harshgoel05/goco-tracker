@@ -18,7 +18,7 @@
     "engine": "node >=0.6.x",
     "scripts": {
         "build": "npm install && cd stats && npm install && cd .. && echo \"Build Finished\"",
-        "heroku-postbuild": " cd stats && ng build --prod",
+        "heroku-postbuild": " cd stats && npm ng build --prod",
         "start": "node server.js"
     },
     "main": "server.js",
