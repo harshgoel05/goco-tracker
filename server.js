@@ -28,9 +28,10 @@ app.use(
 app.use(cors());
 
 app.use(express.static(__dirname + "/stats/dist/client"));
-app.get("/", function (req, res, next) {
-    res.redirect("/");
+app.get("*", function (req, res) {
+    res.sendfile(__dirname + "/stats/dist/client/index.html");
 });
+// Create a port
 
 const port = process.env.PORT;
 const server = app.listen(port, () => {
@@ -39,4 +40,3 @@ const server = app.listen(port, () => {
 // Routes
 const apiroutings = require("./backend/routes/routes");
 app.use("/api", apiroutings);
-// Create a port
