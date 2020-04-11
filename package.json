@@ -13,15 +13,12 @@
         "@angular/compiler-cli": "^4.0.0",
         "@angular/cli": "1.2.3",
         "@angular/common": "^4.0.0",
-        "@angular/compiler": "^4.0.0",
-        "@angular/platform-browser": "^4.0.0",
-        "@angular/platform-browser-dynamic": "^4.0.0",
-        "@angular/router": "^4.0.0"
+        "@angular/compiler": "^4.0.0"
     },
     "engine": "node >=0.6.x",
     "scripts": {
         "build": "npm install && cd stats && npm install && cd .. && echo \"Build Finished\"",
-        "heroku-postbuild": " cd stats && ng build --aot -prod",
+        "heroku-postbuild": " cd stats && ng build --prod",
         "start": "node server.js"
     },
     "main": "server.js",
