@@ -11,7 +11,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { AddStoreComponent } from './add-store/add-store.component';
 import { DoctordashboardComponent } from './doctordashboard/doctordashboard.component';
 import { CommonfooterComponent } from './commonfooter/commonfooter.component';
-import { DoctorloginComponent } from './doctorlogin/doctorlogin.component'
+import { DoctorloginComponent } from './doctorlogin/doctorlogin.component';
+import { StoreRegestrtionComponent } from './store-regestrtion/store-regestrtion.component'
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DoctorloginComponent } from './doctorlogin/doctorlogin.component'
     AddStoreComponent,
     DoctordashboardComponent,
     CommonfooterComponent,
-    DoctorloginComponent
+    DoctorloginComponent,
+    StoreRegestrtionComponent
   ],
   imports: [
     BrowserModule,
