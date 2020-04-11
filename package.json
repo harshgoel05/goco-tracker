@@ -14,7 +14,7 @@
     "engine": "node >=0.6.x",
     "scripts": {
         "build": "npm install && cd stats && npm install && cd .. && echo \"Build Finished\"",
-        "postinstall": "ng build --aot -prod",
+        "postinstall": " cd stats && ng build --aot -prod",
         "start": "node server.js"
     },
     "main": "server.js",
