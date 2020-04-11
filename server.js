@@ -33,7 +33,7 @@ app.get("*", function (req, res) {
 });
 // Create a port
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
     console.log("Connected to port " + port);
 });
