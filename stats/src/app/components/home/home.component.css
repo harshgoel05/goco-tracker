@@ -227,7 +227,7 @@ hr {
 
     margin-bottom: 40px;
 }
-.col-md-7 {
+.middlebox {
     background: #fbbba7;
     margin: 0;
     padding: 0;
@@ -260,9 +260,9 @@ hr {
     padding-bottom: 90px;
 }
 
-@media screen and (max-width: 7670px) {
+@media screen and (max-width: 767px) {
     .hero h1 {
-        font-size: 50px;
+        font-size: 58px;
         padding-top: 30px;
     }
     .hero p {
@@ -276,12 +276,15 @@ hr {
     .hero-image {
         width: 90% !important;
         background-color: white;
-        margin-top: -60px;
+        height: auto;
+        margin-top: 70px;
     }
     .getsb {
         width: 100%;
         background-color: white;
         padding-bottom: 0px;
+        margin: auto;
+        text-align: center;
     }
     .get-started {
         background-color: rgba(245, 97, 51, 1);
@@ -292,6 +295,10 @@ hr {
         padding: 10px 20px;
         transition: 0.19s ease-in all;
         margin: auto;
-        margin-top: 20px !important;
+        margin-top: 30px !important;
+    }
+    #facts .row {
+        display: flex;
+        flex-direction: column-reverse;
     }
 }
