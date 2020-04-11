@@ -46,17 +46,19 @@ Routes.route("/getstores").get((req, res) => {
 });
 //Doctor login
 Routes.route("/validate_login").post((req, res) => {
-	console.log("Doctor Login");
-	const credentials = req.body
-	Store.find({email:credentials.email,password:credentials.password},(err, data) => {
-		if(err){
-			console.log(err)
-		}
-		else{
-			res.status(200).send({ login:success })
-		}
-	})
-})
+    console.log("Doctor Login");
+    const credentials = req.body;
+    Store.find(
+        { email: credentials.email, password: credentials.password },
+        (err, data) => {
+            if (err) {
+                console.log(err);
+            } else {
+                res.status(200).send({ login: success });
+            }
+        }
+    );
+});
 /************************************************************
 					APIS FOR COVID 19 DATA
 *************************************************************/
@@ -154,22 +156,4 @@ Routes.route("/covidWorldHistory").get((req, response) => {
         response.status(500).send(err);
     }
 });
-// Get the GeoLocation of User
-const NodeGeocoder = require("node-geocoder");
-
-Routes.route("/getmylocation").get((req, response) => {
-    const options = {
-        provider: "google",
-
-        // Optional depending on the providers
-        fetch: customFetchImplementation,
-        apiKey: "YOUR_API_KEY", // for Mapquest, OpenCage, Google Premier
-        formatter: null, // 'gpx', 'string', ...
-    };
-
-    const geocoder = NodeGeocoder(options);
-    const res = geocoder.geocode("29 champs elysée paris");
-    console.log(res);
-});
-
 module.exports = Routes;
