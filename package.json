@@ -14,7 +14,7 @@
         "@angular/cli": "1.2.3"
     },
     "scripts": {
-        "heroku-postbuild": "npm install && cd stats && npm install && cd .. && cd stats && ng build --prod",
+        "build": "npm install && cd stats && npm install && cd .. && cd stats && ng build --prod",
         "start": "node server.js"
     },
     "main": "server.js",
