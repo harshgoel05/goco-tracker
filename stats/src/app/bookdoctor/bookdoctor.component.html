@@ -1,0 +1,61 @@
+<div class="nav-cont">
+    <app-navbar></app-navbar>
+</div>
+<div id="gc-main">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+            <div class="box-big">
+                <h2 style="text-align: center; margin-top: 20px;">Get yourself<span style="color: #f56133;">
+                        Checked</span>
+                </h2>
+                <hr>
+                <form class="text-center">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="What's your name?">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="What's your contact Number?">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="What's your Address?">
+                    </div>
+                    <div class="form-group">
+                        <textarea type="text" rows="5" class="form-control"
+                            placeholder="What kind of Symptoms you are facing?"></textarea>
+                    </div>
+                    <button style="margin-top: 10px; background-color: #f56133; border: 0ch; width: 80%;"
+                        class="btn btn-primary mx-auto " (click)="submitform()">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="small-boxes top-box">
+                <h2 style="text-align: center; margin-top: 20px;"><span style="color: #f56133;">Test Centers </span>near
+                    you
+                </h2>
+                <hr>
+            </div>
+            <div class="small-boxes bottom-box">
+                <h2 style="text-align: center; margin-top: 20px;"><span style="color: #f56133;">HelpLine</span>Numbers
+                </h2>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="../../assets/images/png/emergency call,emergency,call,hospital,doctor,phone,receiver,1833385.png"
+                            alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <form [formGroup]="form">
+                            <select formControlName="state">
+                                <option *ngFor="let state of states" [ngValue]="state">{{state.name}}</option>
+                            </select>
+
+                            <p>Selected state: {{state?.number}}</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+.nav-cont {
+    background-color: #fccfc1;
+}
+* {
+    overflow: hidden;
+}
+.box-big {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    min-height: 555px;
+    margin: 50px;
+    margin-right: 10px;
+}
+.small-boxes {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    min-height: 330px;
+    margin: 50px;
+    margin-right: 50px;
+}
+.small-boxes {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    min-height: 270px;
+    margin: 30px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+.top-box {
+    margin-bottom: 15px;
+}
+.bottom-box {
+    margin-top: 15px;
+}
+hr {
+    width: 90%;
+}
+textarea {
+    margin: auto;
+    text-align: center;
+    padding: 20px !important;
+    width: 90%;
+}
+
+input {
+    margin: auto;
+    text-align: center;
+    padding: 3px !important;
+    width: 90%;
+    margin-bottom: 4px;
+}
+.small-boxes img {
+    max-width: 90%;
+    padding: 20px;
+    padding-left: 30px;
+}
