@@ -28,6 +28,7 @@ app.use(
 app.use(cors());
 
 app.use(express.static(__dirname + "/stats/dist/client"));
+const apiroutings = require("./backend/routes/routes");
 app.get("*", function (req, res) {
     res.sendfile(__dirname + "/stats/dist/client/index.html");
 });
@@ -38,5 +39,5 @@ const server = app.listen(port, () => {
     console.log("Connected to port " + port);
 });
 // Routes
-const apiroutings = require("./backend/routes/routes");
+
 app.use("/api", apiroutings);
