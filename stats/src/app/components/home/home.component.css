@@ -227,7 +227,7 @@ hr {
 
     margin-bottom: 40px;
 }
-.col-md-7 {
+.middlebox {
     background: #fbbba7;
     margin: 0;
     padding: 0;
@@ -296,5 +296,9 @@ hr {
         transition: 0.19s ease-in all;
         margin: auto;
         margin-top: 30px !important;
+    }
+    #facts .row {
+        display: flex;
+        flex-direction: column-reverse;
     }
 }

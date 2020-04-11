@@ -11,8 +11,8 @@ const routes: Routes = [
     { path: "", component: HomeComponent },
     { path: "statastics", component: CountriesComponent },
     { path: "doctordashboard", component: DoctordashboardComponent },
-    { path: "doctor", component: DoctordashboardComponent },
-    { path: "store-regestration", component: StoreRegestrtionComponent },
+    { path: "doctorLogin", component: DoctorloginComponent },
+    { path: "addStore", component: StoreRegestrtionComponent },
 ];
 
 @NgModule({
