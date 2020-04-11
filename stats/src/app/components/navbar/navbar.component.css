@@ -9,6 +9,8 @@ nav,
     font-family: "Lato", sans-serif;
     margin-left: 7px;
     margin-right: 7px;
+    
+    
 }
 .active {
     border: 0px 0px 10px solid #000;
@@ -100,6 +102,10 @@ nav,
     width: 0%;
     left: 50%;
 }
+
+
+
+
 /* .navbar{
   background-color: transparent;
   

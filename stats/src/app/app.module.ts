@@ -12,6 +12,7 @@ import { DoctordashboardComponent } from "./doctordashboard/doctordashboard.comp
 import { CommonfooterComponent } from "./commonfooter/commonfooter.component";
 import { DoctorloginComponent } from "./doctorlogin/doctorlogin.component";
 import { StoreRegestrtionComponent } from "./store-regestrtion/store-regestrtion.component";
+import { StoreListComponent } from './store-list/store-list.component';
 
 @NgModule({
     declarations: [
@@ -24,6 +25,7 @@ import { StoreRegestrtionComponent } from "./store-regestrtion/store-regestrtion
         CommonfooterComponent,
         DoctorloginComponent,
         StoreRegestrtionComponent,
+        StoreListComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
     providers: [],
