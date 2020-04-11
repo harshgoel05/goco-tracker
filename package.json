@@ -11,14 +11,11 @@
         "mongoose": "^5.9.7",
         "path": "^0.12.7",
         "@angular/compiler-cli": "^4.0.0",
-        "@angular/cli": "1.2.3",
-        "@angular/common": "^4.0.0",
-        "@angular/compiler": "^4.0.0"
+        "@angular/cli": "1.2.3"
     },
-    "engine": "node >=0.6.x",
     "scripts": {
         "build": "npm install && cd stats && npm install && cd ..",
-        "heroku-postbuild": " cd stats && npx ng build --prod && cd ..",
+        "heroku-postbuild": "cd stats && ng build --prod",
         "start": "node server.js"
     },
     "main": "server.js",
@@ -28,5 +25,9 @@
     },
     "author": "stats",
     "license": "stats",
-    "homepage": "/"
+    "homepage": "/",
+    "engines": {
+        "node": "6.11.0",
+        "npm": "3.10.10"
+    }
 }
