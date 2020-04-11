@@ -44,6 +44,19 @@ Routes.route("/getstores").get((req, res) => {
         }
     });
 });
+//Doctor login
+Routes.route("/validate_login").post((req, res) => {
+	console.log("Doctor Login");
+	const credentials = req.body
+	Store.find({email:credentials.email,password:credentials.password},(err, data) => {
+		if(err){
+			console.log(err)
+		}
+		else{
+			res.status(200).send({ login:success })
+		}
+	})
+})
 /************************************************************
 					APIS FOR COVID 19 DATA
 *************************************************************/
