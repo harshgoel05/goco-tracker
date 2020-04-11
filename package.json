@@ -12,12 +12,12 @@
         "path": "^0.12.7",
         "@angular/compiler-cli": "^4.0.0",
         "@angular/cli": "1.2.3",
-        "@angular/common": "^4.0.0",
-        "@angular/compiler": "^4.0.0",
-        "@angular/core": "^4.0.0"
+        "@angular/common": "^.0.0",
+        "@angular/compiler": "4.0.0",
+        "@angular/core": "4.0.0"
     },
     "scripts": {
-        "build": "npm install && cd stats && npm install && cd .. && cd stats && ng build --prod",
+        "build": "npm install && cd stats && npm install && ng build --prod && cd ..",
         "start": "node server.js"
     },
     "main": "server.js",
