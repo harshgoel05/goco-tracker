@@ -12,7 +12,8 @@ import { AddStoreComponent } from './add-store/add-store.component';
 import { DoctordashboardComponent } from './doctordashboard/doctordashboard.component';
 import { CommonfooterComponent } from './commonfooter/commonfooter.component';
 import { DoctorloginComponent } from './doctorlogin/doctorlogin.component';
-import { StoreRegestrtionComponent } from './store-regestrtion/store-regestrtion.component'
+import { StoreRegestrtionComponent } from './store-regestrtion/store-regestrtion.component';
+import { SideNavComponent } from './side-nav/side-nav.component'
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { StoreRegestrtionComponent } from './store-regestrtion/store-regestrtion
     DoctordashboardComponent,
     CommonfooterComponent,
     DoctorloginComponent,
-    StoreRegestrtionComponent
+    StoreRegestrtionComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,

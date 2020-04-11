@@ -9,7 +9,7 @@ import { StoreRegestrtionComponent } from "./store-regestrtion/store-regestrtion
 
 const routes: Routes = [
     { path: "", component: HomeComponent },
-    { path: "statastics", component: CountriesComponent },
+    { path: "stats", component: CountriesComponent },
     { path: "doctordashboard", component: DoctordashboardComponent },
     { path: "doctorLogin", component: DoctorloginComponent },
     { path: "addStore", component: StoreRegestrtionComponent },
