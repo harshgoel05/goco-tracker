@@ -2,6 +2,8 @@ const express = require("express");
 const Routes = express.Router();
 const Store = require("../models/store");
 const axios = require("axios");
+const jwt = require('jwt')
+const doctor_details = require("../models/doctor_details")
 
 /*
 INDEX
@@ -47,12 +49,14 @@ Routes.route("/getstores").get((req, res) => {
 Routes.route("/validate_login").post((req, res) => {
 	console.log("Doctor Login");
 	const credentials = req.body
-	Store.find({email:credentials.email,password:credentials.password},(err, data) => {
+	doctor_details.find({email:credentials.email,password:credentials.password},(err, data) => {
 		if(err){
 			console.log(err)
 		}
 		else{
-			res.status(200).send({ login:success })
+			let payload = { subject : data._id }
+			let token = jwt.sign(payload, 'secretkey')
+			res.status(200).send({ token })
 		}
 	})
 })
