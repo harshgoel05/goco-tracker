@@ -11,11 +11,11 @@
 }
 .active {
   border: 0px 0px 10px solid #000;
-} */
+}
 
-/* Icon 1 */
 
-/* .animated-icon2 {
+
+.animated-icon2 {
   width: 30px;
   height: 20px;
   position: relative;
@@ -125,16 +125,16 @@
 }
 
 a:link{
-  color: #f56133;
+  color: black;
 
 }
 a:hover{
   text-decoration: none;
 }
 a:active{
-  color: black;
+  color: #f56133;
 }
 a:visited{
-  color: #f56133;
+  color: black;
   
 }
