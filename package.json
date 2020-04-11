@@ -13,8 +13,8 @@
     },
     "engine": "node >=0.6.x",
     "scripts": {
-        "start": "node server.js",
-        "builder": "npm install && cd stats && npm install && ng build --prod --aot && echo \"Build Finished\""
+        "builder": "npm install && cd stats && npm install && ng build --prod --aot && echo \"Build Finished\"",
+        "start": "node server.js"
     },
     "main": "server.js",
     "repository": {
