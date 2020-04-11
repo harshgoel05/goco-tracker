@@ -17,7 +17,7 @@
     },
     "engine": "node >=0.6.x",
     "scripts": {
-        "preinstall": "npm install && cd stats && npm install && cd ..",
+        "build": "npm install && cd stats && npm install && cd ..",
         "heroku-postbuild": " cd stats && npx ng build --prod && cd ..",
         "start": "node server.js"
     },
