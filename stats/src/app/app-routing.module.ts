@@ -10,6 +10,7 @@ import { BookdoctorComponent } from "./bookdoctor/bookdoctor.component";
 import { StoreListComponent } from "./store-list/store-list.component";
 import { BedsComponent } from "./beds/beds.component";
 import { Error404Component } from "./error404/error404.component";
+import { MapsComponent } from "./maps/maps.component";
 
 const routes: Routes = [
     { path: "", component: HomeComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
     { path: "consultDoctor", component: BookdoctorComponent },
     { path: "stores", component: StoreListComponent },
     { path: "beds", component: BedsComponent },
+    { path: "maps", component: MapsComponent },
     { path: "**", component: Error404Component },
 ];
 
