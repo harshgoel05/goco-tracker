@@ -12,7 +12,11 @@ import { StoreListComponent } from "./store-list/store-list.component";
 const routes: Routes = [
     { path: "", component: HomeComponent },
     { path: "statastics", component: CountriesComponent },
-    { path: "doctordashboard", component: DoctordashboardComponent },
+    {
+        path: "doctordashboard",
+        component: DoctordashboardComponent,
+        canActivate: [LoginguardGuard],
+    },
     { path: "login", component: DoctorloginComponent },
     { path: "addStore", component: StoreRegestrtionComponent },
     { path: "consultDoctor", component: BookdoctorComponent },

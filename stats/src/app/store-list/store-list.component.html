@@ -6,16 +6,6 @@
     </div>
     <div class="middlebox">
       <h2 style="text-align: center; margin-top: 20px;"><span style="color: #f56133;">Stores</span> Near You</h2>
-
-
-      <!-- <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-              </ul> -->
-
       <table class="table table-striped">
         <thead>
           <tr>
@@ -35,9 +25,12 @@
             <td>{{store.city}}</td>
             <td>{{store.state}}</td>
             <td>{{store.contact}}</td>
-
           </tr>
         </tbody>
       </table>
+      <hr>
+      <p class="text-center">Want to add a store to list? <a style=" color: #f56133;" routerLink="/addStore">Add
+          here</a>
+      </p>
     </div>
   </div>
