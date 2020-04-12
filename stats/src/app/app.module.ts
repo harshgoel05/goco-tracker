@@ -11,6 +11,13 @@ import { DoctordashboardComponent } from "./doctordashboard/doctordashboard.comp
 import { CommonfooterComponent } from "./commonfooter/commonfooter.component";
 import { DoctorloginComponent } from "./doctorlogin/doctorlogin.component";
 import { StoreRegestrtionComponent } from "./store-regestrtion/store-regestrtion.component";
+import { ChartsModule} from 'ng2-charts'
+
+
+
+
+
+
 import { BookdoctorComponent } from "./bookdoctor/bookdoctor.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { StoreListComponent } from "./store-list/store-list.component";
@@ -33,6 +40,7 @@ import { StoreListComponent } from "./store-list/store-list.component";
         HttpClientModule,
         FormsModule,
         ReactiveFormsModule,
+        ChartsModule
     ],
     providers: [],
     bootstrap: [AppComponent],
