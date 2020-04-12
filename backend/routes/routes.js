@@ -2,8 +2,7 @@ const express = require("express");
 const Routes = express.Router();
 const Store = require("../models/store");
 const axios = require("axios");
-const jwt = require('jwt')
-const doctor_details = require("../models/doctor_details")
+const jwt = require ('jwt')
 
 /*
 INDEX
@@ -54,9 +53,7 @@ Routes.route("/validate_login").post((req, res => {
 			console.log(err)
 		}
 		else{
-			let payload = { subject : data._id }
-			let token = jwt.sign(payload, 'secretkey')
-			res.status(200).send({ token })
+			res.status(200).send({ login: success })
 		}
 	})
 }))
