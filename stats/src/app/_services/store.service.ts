@@ -14,4 +14,7 @@ export class StoreService {
     addPatient(data) {
         return this.http.post("http://localhost:3000/api/addPatient", data);
     }
+    getStoreList() {
+        return this.http.get("http://localhost:3000/api/getstores");
+    }
 }
