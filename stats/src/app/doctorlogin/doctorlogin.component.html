@@ -17,8 +17,8 @@
             <div class="text-center">
                 <button class="btn btn-submit" (click)='login()' [disabled]='!(email && password)'>Submit</button> &nbsp;&nbsp;
                 <button class="btn btn-back" routerLink="/">Back</button>
-            </div>
-            <span class="alert" style="color: red;text-align: center;" *ngIf='errormessage'>{{errormessage}}</span>
+            </div><br>
+            <span class="alert" style="color: red;margin-left:70px" *ngIf='errormessage'>{{errormessage}}</span>
         </form>
     </div>
 </body>

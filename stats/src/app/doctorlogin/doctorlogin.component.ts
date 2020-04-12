@@ -18,7 +18,9 @@ export class DoctorloginComponent implements OnInit {
         this.dataservice
             .doctor_login({ email: this.email, password: this.password })
             .subscribe(
-                (res) => {},
+                (res) => {
+                  localStorage.setItem('token',res.token)
+                },
                 (err) => {
                     this.errormessage = "Wrong Credentials";
                 }

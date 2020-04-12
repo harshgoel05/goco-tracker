@@ -12,6 +12,12 @@ import { DoctordashboardComponent } from "./doctordashboard/doctordashboard.comp
 import { CommonfooterComponent } from "./commonfooter/commonfooter.component";
 import { DoctorloginComponent } from "./doctorlogin/doctorlogin.component";
 import { StoreRegestrtionComponent } from "./store-regestrtion/store-regestrtion.component";
+import { ChartsModule} from 'ng2-charts'
+
+
+
+
+
 
 @NgModule({
     declarations: [
@@ -23,10 +29,10 @@ import { StoreRegestrtionComponent } from "./store-regestrtion/store-regestrtion
         DoctordashboardComponent,
         CommonfooterComponent,
         DoctorloginComponent,
-        StoreRegestrtionComponent,
+        StoreRegestrtionComponent
     ],
-    imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
-    providers: [],
+    imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule , ChartsModule],
+    providers: [    ],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
