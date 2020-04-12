@@ -17,7 +17,7 @@
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" name="contactnum"
-                            placeholder="What's your contact umber?" [(ngModel)]="patient.contactnum">
+                            placeholder="What's your contact number?" [(ngModel)]="patient.contactnum" required>
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" name="address" placeholder="What's your Address?"
@@ -50,13 +50,12 @@
                             alt="">
                     </div>
                     <div class="col-md-7 text-center mx-auto helplinecol " *ngIf="states">
-                        <form [formGroup]="contactform">
-                            <label>Choose your region</label>
-                            <select formControlName="state">
-                                <option *ngFor="let state of states.regional" [ngValue]="state">{{state.loc}}</option>
-                            </select>
-                            <p class="statenumber" style="color: #f56133;">Wait</p>
-                        </form>
+                        <select class="form-control" (change)="changenum($event)">
+                            <option selected disabled>Choose your region</option>
+                            <option *ngFor="let state of states.regional" value="{{state.number}}">
+                                {{state.loc}}</option>
+                        </select>
+                        <p class="statenumber" style="color: #f56133;">{{currentnum}}</p>
                         <p>Primary Number : <span
                                 style="color: #f56133; font-weight: 500;">{{states.primary.number}}</span>
                         </p>

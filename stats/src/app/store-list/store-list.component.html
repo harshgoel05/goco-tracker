@@ -24,7 +24,12 @@
             <td>{{store.contactno}}</td>
             <td>{{store.city}}</td>
             <td>{{store.state}}</td>
-            <td>{{store.contact}}</td>
+            <td>
+              <a *ngIf="store.address" style="background-color: #f56133; border: 0ch;" class="btn btn-primary"
+                href={{store.address}}>Visit
+                Store</a>
+              <p *ngIf="!store.address" class="text-center">N/A</p>
+            </td>
           </tr>
         </tbody>
       </table>

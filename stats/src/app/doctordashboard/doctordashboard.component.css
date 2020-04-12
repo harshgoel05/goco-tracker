@@ -14,16 +14,13 @@
     margin: 50px;
     margin-left: 20px;
     margin-right: 2px;
-    background-color: white;
+    background-color: rgba(256, 256, 256, 0.98);
+    max-height: 555px;
+    overflow: auto;
 }
-.small-boxes {
-    box-shadow: 1px 8px 20px grey;
-    min-height: 330px;
-    margin: 50px;
-    width: 90%;
-    margin-right: 50px;
-    margin-left: 10px;
-    background-color: white;
+button:hover {
+    background-color: rgb(216, 85, 45);
+    box-shadow: 7px 5px 3px 4px rgba(189, 140, 126, 0.226);
 }
 .small-boxes {
     box-shadow: 1px 8px 20px grey;
@@ -32,6 +29,9 @@
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 50px;
+    background-color: rgba(256, 256, 256, 0.98);
+    max-height: 270px;
+    overflow: auto;
 }
 .top-box {
     margin-bottom: 15px;
