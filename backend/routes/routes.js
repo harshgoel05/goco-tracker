@@ -60,23 +60,40 @@ Routes.route("/addPatient").post((req, res) => {
 });
 
 //Doctor login
-Routes.route("/validate_login").post((req, res) => {
-    console.log("Doctor Login");
-    const credentials = req.body;
-    doctor_details.find(
-        { email: credentials.email, password: credentials.password },
-        (err, data) => {
-            if (err) {
-                console.log(err);
+Routes.route("/login").post((req, res) => {
+    let userData = req.body;
+    console.log(userData);
+    doctor_details.findOne({ email: userData.email }, (err, user) => {
+        if (err) {
+            console.log(err);
+        } else {
+            if (!user) {
+                res.status(401).send("Invalid Email!");
             } else {
-                let payload = { subject: data._id };
-                let token = jwt.sign(payload, "secretkey");
-                res.status(200).send({ token });
+                if (user.password != userData.password) {
+                    console.log("The user: ", userData);
+                    res.status(401).send("Wrong Password!");
+                } else {
+                    let payload = { subject: user._id };
+                    let token = jwt.sign(payload, "KEYYYY");
+                    res.status(200).send({ token });
+                }
             }
         }
-    );
+    });
 });
-
+Routes.route("/verifylogin").post((req, res) => {
+    console.log("verify called");
+    let token = req.body.token;
+    try {
+        let data = jwt.verify(token, "KEYYYY");
+        console.log("Yes token is correct");
+        res.send("true");
+    } catch (err) {
+        console.log(err);
+        res.status(401).send("false");
+    }
+});
 /************************************************************
 					APIS FOR COVID 19 DATA
 *************************************************************/

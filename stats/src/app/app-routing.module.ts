@@ -13,7 +13,7 @@ const routes: Routes = [
     { path: "", component: HomeComponent },
     { path: "statastics", component: CountriesComponent },
     {
-        path: "doctordashboard",
+        path: "admin",
         component: DoctordashboardComponent,
         canActivate: [LoginguardGuard],
     },

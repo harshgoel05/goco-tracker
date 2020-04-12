@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { map } from "rxjs/operators";
-
+import { Observable, of } from "rxjs";
+import { catchError } from "rxjs/operators";
 @Injectable({
     providedIn: "root",
 })
@@ -37,7 +38,29 @@ export class DataServiceService {
     doctor_login(data) {
         return this.http.post<any>(this.BaseUrl + this.login_url, data);
     }
+    // loggedIn() {
+    //     return localStorage.getItem("token");
+    // }
+
+    // Edited by Harsh
     loggedIn() {
+        var token1 = localStorage.getItem("token");
+        return this.http
+            .post<boolean>("http://localhost:3000/api/verifylogin", {
+                token: token1,
+            })
+            .pipe(
+                catchError((err) => {
+                    return of(false);
+                })
+            );
+    }
+    getToken() {
         return localStorage.getItem("token");
+    }
+    loginUser(user) {
+        // 2. From admin form, the data comes here as user and then goes to LOGIN NODE API
+        console.log("From Auth Service", user);
+        return this.http.post<any>("http://localhost:3000/api/login", user);
     }
 }

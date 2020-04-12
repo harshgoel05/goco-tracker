@@ -16,18 +16,16 @@ export class DoctorloginComponent implements OnInit {
     ) {}
 
     ngOnInit() {}
-    login() {
-        console.log("login", this.email, this.password);
-        this.dataservice
-            .doctor_login({ email: this.email, password: this.password })
-            .subscribe(
-                (res) => {
-                    localStorage.setItem("token", res.token);
-                    this._router.navigate(["/doctordashboard"]);
-                },
-                (err) => {
-                    this.errormessage = "Wrong Credentials";
-                }
-            );
+    login(form) {
+        console.log(form.value); // 1. Goes to AuthService function LoginUser
+        this.dataservice.loginUser(form.value).subscribe(
+            (res) => {
+                console.log("Loggedin Sucessfully", res);
+                localStorage.setItem("token", res.token);
+                this._router.navigate(["/admin"]);
+            },
+            (error) =>
+                console.log("Error while Logging in from adminlogin: ", error)
+        );
     }
 }
