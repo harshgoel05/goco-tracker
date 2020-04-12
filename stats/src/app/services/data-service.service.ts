@@ -35,9 +35,9 @@ export class DataServiceService {
             })
         );
     }
-    doctor_login(data) {
-        return this.http.post<any>(this.BaseUrl + this.login_url, data);
-    }
+    // doctor_login(data) {
+    //     return this.http.post<any>(this.BaseUrl + this.login_url, data);
+    // }
     // loggedIn() {
     //     return localStorage.getItem("token");
     // }
@@ -57,6 +57,13 @@ export class DataServiceService {
     }
     getToken() {
         return localStorage.getItem("token");
+    }
+    isloggedin() {
+        if (localStorage.getItem("token")) {
+            return true;
+        } else {
+            return false;
+        }
     }
     loginUser(user) {
         // 2. From admin form, the data comes here as user and then goes to LOGIN NODE API

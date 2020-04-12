@@ -23,6 +23,9 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/login" routerLinkActive="active">AdminPanel</a>
       </li>
+      <li class="nav-item" *ngIf="userisloggedin">
+        <a class="nav-link" (click)="logout()">Logout</a>
+      </li>
     </ul>
   </div>
 </nav>
