@@ -8,6 +8,9 @@ import { Color, Label } from "ng2-charts";
     styleUrls: ["./countries.component.css"],
 })
 export class CountriesComponent implements OnInit {
+  public totalconfirmed;
+  public totaldeceased;
+  public totalrecovered;
     constructor(private dataService: DataServiceService) {}
     public barChartOptions = {
         responsive: true,
@@ -110,6 +113,9 @@ export class CountriesComponent implements OnInit {
                 res[i - 1].totaldeceased,
                 res[i - 1].totalrecovered,
             ];
+            this.totalconfirmed=this.active[i-1]
+            this.totaldeceased=this.PieData[0].data[1]
+            this.totalrecovered=this.PieData[0].data[2]
             this.PieChartLabels = [
                 "Total confirmed",
                 "Total deceased",
