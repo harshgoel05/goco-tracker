@@ -7,10 +7,11 @@ require("dotenv").config();
 const app = express();
 const path = require("path");
 // Connecting to MongoDB using MongoClient
-const dburl =
-    "mongodb+srv://hackon:hackon123@cluster0-x5lvb.mongodb.net/Hackon?retryWrites=true&w=majority";
 mongoose
-    .connect(dburl)
+    .connect(process.env.DBURL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
     .then(() => {
         console.log("Database connection successful");
     })
@@ -35,7 +36,7 @@ app.get("*", function (req, res) {
 });
 // Create a port
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 const server = app.listen(port, () => {
     console.log("Connected to port " + port);
 });

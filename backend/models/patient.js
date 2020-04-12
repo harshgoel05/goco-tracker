@@ -6,5 +6,9 @@ const patientSchema = new Schema({
     contactnum: String,
     address: String,
     symptoms: String,
+    status: {
+        type: String,
+        default: "notupdated",
+    },
 });
 module.exports = mongoose.model("patient", patientSchema, "patientDb");

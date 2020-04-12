@@ -21,7 +21,7 @@ INDEX
 */
 
 /************************************************************
-					APIS FOR DATABASE
+					APIS FOR Stores
 *************************************************************/
 // Add stores to Database
 Routes.route("/addstore").post((req, res) => {
@@ -46,20 +46,79 @@ Routes.route("/getstores").get((req, res) => {
         }
     });
 });
+
+/************************************************************
+					APIS FOR Patient
+*************************************************************/
+// Get all the patient from the Database
+Routes.route("/getpatients").get((req, res) => {
+    console.log("Getting all Stores");
+    Patient.find((err, data) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.status(200).send(data);
+        }
+    });
+});
 // Add patient to Database
 Routes.route("/addPatient").post((req, res) => {
     // console.log("Adding Store with data", req.body);
-    let store = new Patient(req.body);
-    store.save(function (err) {
+    let p = new Patient(req.body);
+    p.save(function (err) {
         if (err) {
-            console.log("Error while adding from at backend");
+            console.log("Error while adding patient from at backend");
             res.status(500).send({ success: false });
         }
         res.status(200).send({ success: true });
     });
 });
+//Mark Patient Positive
+Routes.route("/markpatientpostive/:id").put((req, res) => {
+    console.log("Called", req.params.id);
+    Patient.findByIdAndUpdate(
+        req.params.id,
+        {
+            $set: {
+                status: "Positive",
+            },
+        },
+        (error, data) => {
+            if (error) {
+                console.log(error);
+                res.status(500).send("Error");
+            } else {
+                res.json(data);
+                console.log("Data updated successfully");
+            }
+        }
+    );
+});
+//Mark Patient Negative
+Routes.route("/markpatientnegative/:id").put((req, res) => {
+    console.log("Called", req.params.id);
+    Patient.findByIdAndUpdate(
+        req.params.id,
+        {
+            $set: {
+                status: "Negative",
+            },
+        },
+        (error, data) => {
+            if (error) {
+                console.log(error);
+                res.status(500).send("Error");
+            } else {
+                res.json(data);
+                console.log("Data updated successfully");
+            }
+        }
+    );
+});
 
-//Doctor login
+/************************************************************
+					APIS FOR Adminlogin
+*************************************************************/
 Routes.route("/login").post((req, res) => {
     let userData = req.body;
     console.log(userData);

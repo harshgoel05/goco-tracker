@@ -32,7 +32,8 @@
 				</div>
 				<div class="form-group">
 					<label for="inputAddress">Address</label>
-					<input type="text" class="form-control" [(ngModel)]="store.address">
+					<input type="text" class="form-control" [(ngModel)]="store.address"
+						placeholder="GoogleMap link of your store">
 				</div>
 				<div class="form-row">
 					<div class="form-group col-sm-6">
@@ -44,12 +45,11 @@
 						<input type="text" class="form-control" [(ngModel)]="store.state">
 					</div>
 				</div>
-				<button style="margin-left: 42%; margin-top: 10px; background-color: #f56133; border: 0ch;"
-					class="btn btn-primary" (click)="submitform()">Submit</button>
+				<div class="text-center">
+					<button style="margin-top: 10px; background-color: #f56133; border: 0ch; width: 30%;"
+						class="btn btn-primary" (click)="submitform()">Submit</button>
+				</div>
 			</div>
-
 		</div>
-
-
 	</div>
 </div>

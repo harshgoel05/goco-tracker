@@ -23,8 +23,11 @@
     margin-left: 15vw;
     margin-top: 10px;
     box-shadow: 1px 8px 20px grey;
-    height: 90vh;
     border-radius: 10px;
+}
+button:hover {
+    background-color: rgb(216, 85, 45);
+    box-shadow: 7px 5px 3px 4px rgba(189, 140, 126, 0.226);
 }
 
 .reg-form {

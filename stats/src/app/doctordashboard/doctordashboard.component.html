@@ -10,6 +10,26 @@
                         Queries</span>
                 </h2>
                 <hr>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Contact Number</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Symptom</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let p of patients">
+                            <th scope="row">{{p.name}}</th>
+                            <td>{{p.contactnum}}</td>
+                            <td>{{p.address}}</td>
+                            <td>{{p.symptoms}}</td>
+                            <td>{{p.status}}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <div class="col-md-6">
@@ -17,11 +37,25 @@
                 <h2 style="text-align: center; margin-top: 20px;">Send <span style="color: #f56133;">Notification</span>
                 </h2>
                 <hr>
+                <div class="text-center">
+                    <textarea type="text" class="form-control" placeholder="Type your message here"></textarea>
+                    <button style="margin-top: 10px; background-color: #f56133; border: 0ch; width: 30%;"
+                        class="btn btn-primary" (click)="submitform()">Send</button>
+                </div>
             </div>
             <div class="small-boxes bottom-box">
-                <h2 style="text-align: center; margin-top: 20px;"><span style="color: #f56133;">Update </span>Status
+                <h2 style="text-align: center; margin-top: 30px;"><span style="color: #f56133;">Update </span>Status
                 </h2>
                 <hr>
+                <table class="table table-striped" style="overflow: scroll; text-align: center;">
+                    <tbody>
+                        <tr *ngFor="let p of patients">
+                            <th scope="row">{{p.name}}</th>
+                            <td><button class="btn btn-danger" (click)="markpositive(p)">Positive</button></td>
+                            <td><button class="btn btn-success" (click)="marknegative(p)">Negative</button></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

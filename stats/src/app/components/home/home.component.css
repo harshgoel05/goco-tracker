@@ -5,6 +5,7 @@
 }
 * {
     overflow: hidden;
+    scroll-behavior: smooth;
 }
 #landing img {
     max-width: 90%;

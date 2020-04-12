@@ -34,14 +34,23 @@ export class BookdoctorComponent implements OnInit {
         return this.contactform ? this.contactform.get("state").value : "";
     }
     submitform() {
-        console.log(this.patient);
-        this._service.addPatient(this.patient).subscribe(
-            (res) => {
-                alert("Added Patient Record");
-            },
-            (err) => {
-                console.log("Error while adding Patient Record", err);
-            }
-        );
+        if (
+            this.patient.name == "" ||
+            this.patient.contactnum == "" ||
+            this.patient.address == "" ||
+            this.patient.symptoms == ""
+        ) {
+            alert("Please fill all details!");
+        } else {
+            console.log(this.patient);
+            this._service.addPatient(this.patient).subscribe(
+                (res) => {
+                    alert("Added Patient Record");
+                },
+                (err) => {
+                    console.log("Error while adding Patient Record", err);
+                }
+            );
+        }
     }
 }
