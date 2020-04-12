@@ -25,6 +25,7 @@
     "chart.js": "^2.9.3",
     "d3-geomap": "^3.3.0",
     "highcharts": "^8.0.4",
+    "@types/googlemaps": "^3.39.3",
     "jquery": "^3.4.1",
     "ng-chartjs": "^0.1.8",
     "ng-worldmap": "^1.2.2",

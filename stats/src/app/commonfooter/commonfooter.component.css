@@ -1,11 +1,11 @@
 .site-footer
 {
   margin-top: 80px;
-  background-color: #fbbba7;
+  background-image: url(../../assets/images/Groupfooter.svg);
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
-  color:#737373;
+  color: black;
 }
 .site-footer hr
 {
@@ -26,7 +26,7 @@
 }
 .site-footer a
 {
-  color:#737373;
+  color: black;
 }
 .site-footer a:hover
 {
@@ -44,7 +44,7 @@
 }
 .footer-links a
 {
-  color:#737373
+  color: black
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
