@@ -13,12 +13,26 @@ export class NavbarComponent implements OnInit {
         private _service: DataServiceService,
         private _router: Router
     ) {}
-
+    wordsArray = ["Beta", "Gamma", "Delta", "Alpha"];
+    count;
     ngOnInit() {
         $(".second-button").on("click", function () {
             $(".animated-icon2").toggleClass("open");
         });
         this.userisloggedin = this._service.isloggedin();
+        (function () {
+            var quotes = $(".notiflines");
+            var quoteIndex = -1;
+            function showNextQuote() {
+                ++quoteIndex;
+                quotes
+                    .eq(quoteIndex % quotes.length)
+                    .fadeIn(500)
+                    .delay(1000)
+                    .fadeOut(500, showNextQuote);
+            }
+            showNextQuote();
+        })();
     }
     logout() {
         console.log("Logging out!");
