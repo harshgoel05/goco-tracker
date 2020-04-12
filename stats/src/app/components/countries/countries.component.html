@@ -1,89 +1,79 @@
-
-<app-navbar></app-navbar>
-
-
-  <div class="main">
-  
-    <div class="heading-top">
-      <h1><span style="color: #f46232; margin-left: 80px;">Over</span>view</h1>
-      <hr style="width: 90vw;">
+<div class="main">
+  <app-navbar></app-navbar>
+  <div class="heading-top">
+    <h1><span style="color: #f46232; margin-left: 80px;">Over</span>view</h1>
+    <hr style="width: 90vw;">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="heading">
+          <div class="vl">
+            <h3 style="margin-left: 10px; color: #1c84c6;">Total Cases</h3>
+          </div>
+          <hr>
+          <h2 style="margin-left: 40%;">123</h2>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="heading">
+          <div class="vl1">
+            <h3 style="margin-left: 10px; color: #f14338;">Total Cases</h3>
+          </div>
+          <hr>
+          <h2 style="margin-left: 40%;">123</h2>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="heading">
+          <div class="vl2">
+            <h3 style="margin-left: 10px; color: #78bd78;">Total Cases</h3>
+          </div>
+          <hr>
+          <h2 style="margin-left: 40%;">123</h2>
+        </div>
+      </div>
     </div>
-     <div class="container">
-       <div class="row">
-         <div class="col-sm">
-           <div class="heading">
-             <div class="vl"><h3 style="margin-left: 10px; color: #1c84c6;">Total Cases</h3></div>
-             <hr>
-             <h2 style="margin-left: 40%;">123</h2>
-           </div>
-         </div>
-         <div class="col-sm">
-           <div class="heading">
-             <div class="vl1"><h3 style="margin-left: 10px; color: #f14338;">Total Cases</h3></div>
-             <hr>
-             <h2 style="margin-left: 40%;">123</h2>
-           </div>
-         </div>
-         <div class="col-sm">
-           <div class="heading">
-             <div class="vl2"><h3 style="margin-left: 10px; color: #78bd78;">Total Cases</h3></div>
-             <hr>
-             <h2 style="margin-left: 40%;">123</h2>
-           </div>
-         </div>
-       </div>
-     </div>
-   
-     <section class="chart">
-       <div class="container">
-         <div class="row">
-           <div class="col">
-                <canvas baseChart
-                   [datasets]="barChartData"
-                   [labels]="barChartLabels"
-                   [options]="barChartOptions"
-                   [legend]="barChartLegend"
-                   [colors]="BarChartColors"
-                   [chartType]="barChartType">
-                 </canvas>
-           </div>
-           <div class="col">
-             <canvas baseChart
-                   [datasets]="PieData"
-                   [labels]="PieChartLabels"
-                   [options]="pieChartOptions"
-                   [colors]="pieChartColors"
-                   [chartType]="PieChartType">
-                 </canvas>
-           </div>
-         </div>
-         <div class="bar">
-           
-           <div class="row">
-             <h1 style="margin-left: 35%; margin-bottom: 10px;"><span style="color: #f46232;">State-Wise</span> Analysis</h1>
-             
-             <canvas baseChart
-             [datasets]="stateBarData"
-             [labels]="stateBarChartLabels"
-             [options]="stateBarChartOptions"
-             [legend]="stateBarChartLegend"
-             [chartType]="stateBarChartType">
-           </canvas>
-           </div>
-     
-         </div>
-       </div>
-       
-     </section>
-     
-   </div>
-   
+  </div>
+
+  <section class="chart">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+            [legend]="barChartLegend" [colors]="BarChartColors" [chartType]="barChartType">
+          </canvas>
+        </div>
+        <div class="col">
+          <canvas baseChart [datasets]="PieData" [labels]="PieChartLabels" [options]="pieChartOptions"
+            [colors]="pieChartColors" [chartType]="PieChartType">
+          </canvas>
+        </div>
+      </div>
+      <div class="bar">
+
+        <div class="row">
+          <h1 style="margin-left: 35%; margin-bottom: 10px;"><span style="color: #f46232;">State-Wise</span> Analysis
+          </h1>
+
+          <canvas baseChart [datasets]="stateBarData" [labels]="stateBarChartLabels" [options]="stateBarChartOptions"
+            [legend]="stateBarChartLegend" [chartType]="stateBarChartType">
+          </canvas>
+        </div>
+
+      </div>
+
+      
+
+      
+    </div>
+
+  </section>
+
+  <h1><span style="color: #f46232; margin-left: 80px; margin-top: 20px;">Availability</span> of Beds and Hospitals</h1>
+  <hr style="width: 90vw;">
+  <div class="beds container">
+    <app-beds></app-beds>
+  </div>
   
-
-
-
-
-
-
-
-
+</div>
