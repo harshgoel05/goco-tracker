@@ -1,6 +1,6 @@
 /node_modules
 /backend/node_modules
 /GoCoTracker/node_modules
-/backend/.env
+/*.env
 /client/node_modules
 /stats/node_modules

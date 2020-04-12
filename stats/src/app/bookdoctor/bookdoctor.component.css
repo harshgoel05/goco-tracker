@@ -1,0 +1,68 @@
+.nav-cont {
+    background-color: white;
+}
+* {
+    overflow: hidden;
+}
+
+#gc-main{
+    background-image: url(../../assets/images/try-s.png);
+}
+.box-big {
+    box-shadow: 1px 8px 20px grey;
+    min-height: 555px;
+    margin: 50px;
+    margin-left: 20px;
+    margin-right: 2px;
+    background-color: white;
+
+}
+.small-boxes {
+    box-shadow: 1px 8px 20px grey;
+    min-height: 330px;
+    margin: 50px;
+    width: 550px;
+    margin-right: 50px;
+    margin-left: 10px;
+    background-color: white;
+    
+    
+}
+.small-boxes {
+    box-shadow: 1px 8px 20px grey;
+    min-height: 270px;
+    margin: 30px;
+    margin-left: 10px;
+    margin-right: 10px ;
+    margin-top: 50px;
+    
+}
+.top-box {
+    margin-bottom: 15px;
+}
+
+.bottom-box {
+    margin-top: 15px;
+}
+hr {
+    width: 90%;
+}
+textarea {
+    margin: auto;
+    text-align: center;
+    padding: 20px !important;
+    width: 90%;
+}
+
+input {
+    margin: auto;
+    text-align: center;
+    padding: 3px !important;
+    width: 90%;
+    margin-bottom: 4px;
+}
+.small-boxes img {
+    max-width: 90%;
+    padding: 20px;
+    padding-left: 30px;
+}
