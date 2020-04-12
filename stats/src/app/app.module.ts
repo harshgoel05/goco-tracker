@@ -21,6 +21,7 @@ import { ChartsModule} from 'ng2-charts'
 import { BookdoctorComponent } from "./bookdoctor/bookdoctor.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { StoreListComponent } from "./store-list/store-list.component";
+import { ChartsComponent } from './charts/charts.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -33,6 +34,7 @@ import { StoreListComponent } from "./store-list/store-list.component";
         StoreRegestrtionComponent,
         BookdoctorComponent,
         StoreListComponent,
+        ChartsComponent,
     ],
     imports: [
         BrowserModule,

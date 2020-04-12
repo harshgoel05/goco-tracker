@@ -11,11 +11,6 @@ import { StoreListComponent } from "./store-list/store-list.component";
 
 const routes: Routes = [
     { path: "", component: HomeComponent },
-<<<<<<< HEAD
-    { path: "stats", component: CountriesComponent },
-    { path: "doctordashboard", component: DoctordashboardComponent },
-    { path: "doctorLogin", component: DoctorloginComponent },
-=======
     { path: "statastics", component: CountriesComponent },
     {
         path: "admin",
@@ -23,7 +18,6 @@ const routes: Routes = [
         canActivate: [LoginguardGuard],
     },
     { path: "login", component: DoctorloginComponent },
->>>>>>> d6846d22066119111e21b7c451c2c72ea62e37e1
     { path: "addStore", component: StoreRegestrtionComponent },
     { path: "consultDoctor", component: BookdoctorComponent },
     { path: "stores", component: StoreListComponent },
