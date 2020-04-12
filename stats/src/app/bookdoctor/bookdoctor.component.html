@@ -1,10 +1,7 @@
-<!-- <div class="nav-cont">
+<div class="nav-cont">
     <app-navbar></app-navbar>
-</div> -->
+</div>
 <div id="gc-main">
-    <app-navbar></app-navbar>
-   
-      
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-5">
@@ -15,17 +12,21 @@
                 <hr>
                 <form class="text-center">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="What's your name?">
+                        <input type="text" class="form-control" name="namee" placeholder="What's your name?"
+                            [(ngModel)]="patient.name">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="What's your contact Number?">
+                        <input type="text" class="form-control" name="contactnum"
+                            placeholder="What's your contact umber?" [(ngModel)]="patient.contactnum">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="What's your Address?">
+                        <input type="text" class="form-control" name="address" placeholder="What's your Address?"
+                            [(ngModel)]="patient.address">
                     </div>
                     <div class="form-group">
                         <textarea type="text" rows="5" class="form-control"
-                            placeholder="What kind of Symptoms you are facing?"></textarea>
+                            placeholder="What kind of Symptoms you are facing?" [(ngModel)]="patient.symptoms"
+                            name="symptoms"></textarea>
                     </div>
                     <button style="margin-top: 10px; background-color: #f56133; border: 0ch; width: 80%;"
                         class="btn btn-primary mx-auto " (click)="submitform()">Submit</button>
@@ -44,18 +45,24 @@
                 </h2>
                 <hr>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-5 mx-auto text-center">
                         <img src="../../assets/images/png/emergency call,emergency,call,hospital,doctor,phone,receiver,1833385.png"
                             alt="">
                     </div>
-                    <div class="col-md-8">
-                        <form [formGroup]="form">
+                    <div class="col-md-7 text-center mx-auto helplinecol " *ngIf="states">
+                        <form [formGroup]="contactform">
+                            <label>Choose your region</label>
                             <select formControlName="state">
-                                <option *ngFor="let state of states" [ngValue]="state">{{state.name}}</option>
+                                <option *ngFor="let state of states.regional" [ngValue]="state">{{state.loc}}</option>
                             </select>
-
-                            <p>Selected state: {{state?.number}}</p>
+                            <p class="statenumber" style="color: #f56133;">Wait</p>
                         </form>
+                        <p>Primary Number : <span
+                                style="color: #f56133; font-weight: 500;">{{states.primary.number}}</span>
+                        </p>
+                        <p>Primary Email : <span
+                                style="color: #f56133; font-weight: 500;">{{states.primary.email}}</span>
+                        </p>
                     </div>
                 </div>
             </div>
