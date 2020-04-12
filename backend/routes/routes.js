@@ -1,6 +1,7 @@
 const express = require("express");
 const Routes = express.Router();
 const Store = require("../models/store");
+const Patient = require("../models/patient");
 const axios = require("axios");
 
 /*
@@ -44,6 +45,19 @@ Routes.route("/getstores").get((req, res) => {
         }
     });
 });
+// Add patient to Database
+Routes.route("/addPatient").post((req, res) => {
+    // console.log("Adding Store with data", req.body);
+    let store = new Patient(req.body);
+    store.save(function (err) {
+        if (err) {
+            console.log("Error while adding from at backend");
+            res.status(500).send({ success: false });
+        }
+        res.status(200).send({ success: true });
+    });
+});
+
 //Doctor login
 Routes.route("/validate_login").post((req, res) => {
     console.log("Doctor Login");
@@ -95,7 +109,7 @@ Routes.route("/covidIndiaContacts").get((req, response) => {
     try {
         axios.get("https://api.rootnet.in/covid19-in/contacts").then((res) => {
             // console.log(res.data.data);
-            response.status(200).send(res.data.data);
+            response.status(200).send(res.data.data.contacts);
         });
     } catch (err) {
         // console.error(err);

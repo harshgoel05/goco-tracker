@@ -6,6 +6,7 @@ import { DoctordashboardComponent } from "./doctordashboard/doctordashboard.comp
 import { DoctorloginComponent } from "./doctorlogin/doctorlogin.component";
 import { StoreRegestrtionComponent } from "./store-regestrtion/store-regestrtion.component";
 import { BookdoctorComponent } from "./bookdoctor/bookdoctor.component";
+import { StoreListComponent } from "./store-list/store-list.component";
 
 const routes: Routes = [
     { path: "", component: HomeComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
     { path: "doctorlogin", component: DoctorloginComponent },
     { path: "addStore", component: StoreRegestrtionComponent },
     { path: "consultDoctor", component: BookdoctorComponent },
+    { path: "stores", component: StoreListComponent },
 ];
 
 @NgModule({

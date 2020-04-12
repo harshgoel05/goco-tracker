@@ -5,7 +5,7 @@
     overflow: hidden;
 }
 
-#gc-main{
+#gc-main {
     background-image: url(../../assets/images/try-s.png);
 }
 .box-big {
@@ -15,7 +15,6 @@
     margin-left: 20px;
     margin-right: 2px;
     background-color: white;
-
 }
 .small-boxes {
     box-shadow: 1px 8px 20px grey;
@@ -25,17 +24,14 @@
     margin-right: 50px;
     margin-left: 10px;
     background-color: white;
-    
-    
 }
 .small-boxes {
     box-shadow: 1px 8px 20px grey;
     min-height: 270px;
     margin: 30px;
     margin-left: 10px;
-    margin-right: 10px ;
+    margin-right: 10px;
     margin-top: 50px;
-    
 }
 .top-box {
     margin-bottom: 15px;
@@ -62,7 +58,39 @@ input {
     margin-bottom: 4px;
 }
 .small-boxes img {
-    max-width: 90%;
-    padding: 20px;
-    padding-left: 30px;
+    text-align: center;
+    margin: auto;
+    max-width: 60%;
+}
+.statenumber {
+    font-weight: 700 !important;
+    margin-top: 5px !important;
+    font-size: 18px;
+    margin-bottom: 5px !important;
+}
+.helplinecol {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 767px) {
+    .box-big {
+        min-height: 555px;
+        margin-left: 10px;
+        max-width: 95%;
+    }
+    .small-boxes {
+        min-height: 400px;
+        width: 95%;
+        margin-left: 10px;
+    }
+    .small-boxes img {
+        text-align: center;
+        margin: auto;
+        max-width: 30%;
+        margin-bottom: 20px;
+    }
 }

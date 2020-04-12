@@ -13,6 +13,7 @@ import { DoctorloginComponent } from "./doctorlogin/doctorlogin.component";
 import { StoreRegestrtionComponent } from "./store-regestrtion/store-regestrtion.component";
 import { BookdoctorComponent } from "./bookdoctor/bookdoctor.component";
 import { ReactiveFormsModule } from "@angular/forms";
+import { StoreListComponent } from "./store-list/store-list.component";
 @NgModule({
     declarations: [
         AppComponent,
@@ -24,6 +25,7 @@ import { ReactiveFormsModule } from "@angular/forms";
         DoctorloginComponent,
         StoreRegestrtionComponent,
         BookdoctorComponent,
+        StoreListComponent,
     ],
     imports: [
         BrowserModule,
