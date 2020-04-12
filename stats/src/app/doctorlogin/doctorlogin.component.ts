@@ -24,8 +24,11 @@ export class DoctorloginComponent implements OnInit {
                 localStorage.setItem("token", res.token);
                 this._router.navigate(["/admin"]);
             },
-            (error) =>
-                console.log("Error while Logging in from adminlogin: ", error)
+            (error) => {
+                if (error.statusText == "Unauthorized") {
+                    this.errormessage = "Invalid Credentials";
+                }
+            }
         );
     }
 }
