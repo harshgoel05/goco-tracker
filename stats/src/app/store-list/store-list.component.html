@@ -1,0 +1,36 @@
+<div class="main">
+  <app-navbar></app-navbar>
+  <div id="boxes">
+    <div class="leftbox">
+      <img src="../../assets/images/doctor-manlist.svg" class="image">
+    </div>
+    <div class="middlebox">
+      <h2 style="text-align: center; margin-top: 20px;"><span style="color: #f56133;">Stores</span> Near You</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Owner Contact</th>
+            <th scope="col">City</th>
+            <th scope="col">State</th>
+            <th scope="col">GMap Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let store of storelist.stores">
+            <th scope="row">{{store.name}}</th>
+            <td>{{store.category}}</td>
+            <td>{{store.contactno}}</td>
+            <td>{{store.city}}</td>
+            <td>{{store.state}}</td>
+            <td>{{store.contact}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+      <p class="text-center">Want to add a store to list? <a style=" color: #f56133;" routerLink="/addStore">Add
+          here</a>
+      </p>
+    </div>
+  </div>

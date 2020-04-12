@@ -1,80 +1,80 @@
 body {
-  height: 100vh;
-  width: 100vw;
-  background-image: url(../../assets/images/HomePageSS.png);
-  background-size: cover;
-  position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../../assets/images/HomePageSS.png);
+    background-size: cover;
+    position: relative;
 }
 .box {
-  width: 400px;
-  height: 400px;
-  background-color: #fff;
-  border: 1px solid #000;
-  position: absolute;
-  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 30px;
-  padding: 30px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    width: 430px;
+    height: 430px;
+    background-color: #fff;
+    border: 1px solid #000;
+    position: absolute;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .box h1 {
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
 }
 span {
-  color: #f56133;
-  font-weight: 600;
+    color: #f56133;
+    font-weight: 600;
 }
 form {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 form .btn-submit {
-  background: #f56133;
-  transition: 0.25s ease-in all;
-  color: white;
-  width: 30%;
-  margin-top: 15px;
+    background: #f56133;
+    transition: 0.25s ease-in all;
+    color: white;
+    width: 30%;
+    margin-top: 15px;
 }
 form .btn-submit:hover,
 form .btn-submit:active,
 form .btn-submit:focus {
-  background-color: #c94016;
-  box-shadow: 7px 4px 4px 2px rgba(109, 51, 17, 0.284);
+    background-color: #c94016;
+    box-shadow: 7px 4px 4px 2px rgba(109, 51, 17, 0.284);
 }
 form label {
-  font-size: 19px;
-  font-weight: 400;
+    font-size: 19px;
+    font-weight: 400;
 }
 
 form input:hover,
 form input:active,
 form input:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 174, 0, 0.25);
-  outline: none;
-  border: #c94016;
+    box-shadow: 0 0 0 0.2rem rgba(255, 174, 0, 0.25);
+    outline: none;
+    border: #c94016;
 }
 @media (max-width: 1000px) {
-  .box {
-    width: 300px;
-    height: 400px;
-  }
-  form button {
-    width: 45%;
-  }
+    .box {
+        width: 300px;
+        height: 400px;
+    }
+    form button {
+        width: 45%;
+    }
 }
 form .btn-back {
-  background: none;
-  transition: 0.25s ease-in all;
-  color: #c94016;
-  width: 30%;
-  margin-top: 15px;
-  border: 1px solid #c94016;
+    background: none;
+    transition: 0.25s ease-in all;
+    color: #c94016;
+    width: 30%;
+    margin-top: 15px;
+    border: 1px solid #c94016;
 }
 form .btn-back:hover,
 form .btn-back:active,
 form .btn-back:focus {
-  background-color: #c94016;
-  color: white;
-  box-shadow: 7px 4px 4px 2px rgba(109, 51, 17, 0.284);
+    background-color: #c94016;
+    color: white;
+    box-shadow: 7px 4px 4px 2px rgba(109, 51, 17, 0.284);
 }

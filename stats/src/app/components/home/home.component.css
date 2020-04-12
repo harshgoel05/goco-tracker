@@ -1,7 +1,7 @@
 /* MAIN START */
 
 .nav-cont {
-    background-color: #fbbba7;
+    background-color: #f9a58b;
 }
 * {
     overflow: hidden;
@@ -228,7 +228,7 @@ hr {
     margin-bottom: 40px;
 }
 .middlebox {
-    background: #fbbba7;
+    background: #f9a58b;
     margin: 0;
     padding: 0;
 }
