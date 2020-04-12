@@ -1,0 +1,16 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Sate</th>
+            <th scope="col">No of Beds</th>
+            <th scope="col">No of Hospitals</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of beds.regional">
+            <th scope="row">{{p.state}}</th>
+            <td>{{p.totalBeds}}</td>
+            <td>{{p.totalHospitals}}</td>
+        </tr>
+    </tbody>
+</table>

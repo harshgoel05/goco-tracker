@@ -38,4 +38,7 @@ export class StoreService {
             headers: this.headers,
         });
     }
+    getbeds() {
+        return this.http.get(this.baseurl + "/covidIndiaHospitalBeds");
+    }
 }
