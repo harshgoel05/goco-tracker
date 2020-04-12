@@ -32,7 +32,7 @@ app.use(express.static(__dirname + "/stats/dist/client"));
 const apiroutings = require("./backend/routes/routes");
 app.use("/api", apiroutings);
 app.get("*", function (req, res) {
-    res.sendfile(__dirname + "/stats/dist/client/index.html");
+    res.sendFile(__dirname + "/stats/dist/client/index.html");
 });
 // Create a port
 

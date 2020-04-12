@@ -10,7 +10,7 @@ import {
 export class StoreService {
     constructor(private http: HttpClient) {}
     headers = new HttpHeaders().set("Content-Type", "application/json");
-    baseurl = "";
+    baseurl = "/api";
     addStore(data) {
         return this.http.post(this.baseurl + "/addstore", data);
     }
