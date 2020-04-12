@@ -13,7 +13,7 @@ import { Error404Component } from "./error404/error404.component";
 
 const routes: Routes = [
     { path: "", component: HomeComponent },
-    { path: "statastics", component: CountriesComponent },
+    { path: "stats", component: CountriesComponent },
     {
         path: "admin",
         component: DoctordashboardComponent,
