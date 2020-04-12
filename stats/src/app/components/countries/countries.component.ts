@@ -17,7 +17,7 @@ MapModule(Highcharts);*/
     styleUrls: ["./countries.component.css"],
 })
 export class CountriesComponent implements OnInit {
-    constructor(dataService: DataServiceService) {}
+    constructor(private dataService: DataServiceService) {}
     public barChartOptions = {
         responsive: true,
         options: {
