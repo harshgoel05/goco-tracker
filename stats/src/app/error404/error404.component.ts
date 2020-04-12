@@ -29,9 +29,10 @@ export class Error404Component implements OnInit {
             "use strict";
             if (i > 40) {
                 clearInterval(loop3);
-                selector3.textContent = 4;
+                selector3.textContent = "4";
             } else {
-                selector3.textContent = randomNum();
+                var count = randomNum();
+                selector3.textContent = String(count);
                 i++;
             }
         }, time);
@@ -39,9 +40,10 @@ export class Error404Component implements OnInit {
             "use strict";
             if (i > 80) {
                 clearInterval(loop2);
-                selector2.textContent = 0;
+                selector2.textContent = "0";
             } else {
-                selector2.textContent = randomNum();
+                var count = randomNum();
+                selector2.textContent = String(count);
                 i++;
             }
         }, time);
@@ -49,9 +51,10 @@ export class Error404Component implements OnInit {
             "use strict";
             if (i > 100) {
                 clearInterval(loop1);
-                selector1.textContent = 4;
+                selector1.textContent = "4";
             } else {
-                selector1.textContent = randomNum();
+                var count = randomNum();
+                selector1.textContent = String(count);
                 i++;
             }
         }, time);

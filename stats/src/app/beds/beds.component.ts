@@ -23,4 +23,6 @@ export class BedsComponent implements OnInit {
             }
         );
     }
+
+    
 }

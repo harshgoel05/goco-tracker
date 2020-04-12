@@ -8,9 +8,9 @@ import { Color, Label } from "ng2-charts";
     styleUrls: ["./countries.component.css"],
 })
 export class CountriesComponent implements OnInit {
-  public totalconfirmed;
-  public totaldeceased;
-  public totalrecovered;
+    public totalconfirmed;
+    public totaldeceased;
+    public totalrecovered;
     constructor(private dataService: DataServiceService) {}
     public barChartOptions = {
         responsive: true,
@@ -88,7 +88,7 @@ export class CountriesComponent implements OnInit {
     }
     getStateData() {
         this.dataService.getIndiaStateData().subscribe((res) => {
-            console.log(res);
+            // console.log(res);
             let i = 0;
             for (i = 0; i < res.length; i++) {
                 this.stateBarData[0].data.push(res[i].active);
@@ -102,7 +102,7 @@ export class CountriesComponent implements OnInit {
     }
     getDailyData() {
         this.dataService.getDailyData().subscribe((res) => {
-            console.log(res);
+            // console.log(res);
             let i = 0;
             for (i = 0; i < res.length; i++) {
                 this.active.push(res[i].totalconfirmed);
@@ -113,16 +113,16 @@ export class CountriesComponent implements OnInit {
                 res[i - 1].totaldeceased,
                 res[i - 1].totalrecovered,
             ];
-            this.totalconfirmed=this.active[i-1]
-            this.totaldeceased=this.PieData[0].data[1]
-            this.totalrecovered=this.PieData[0].data[2]
+            this.totalconfirmed = this.active[i - 1];
+            this.totaldeceased = this.PieData[0].data[1];
+            this.totalrecovered = this.PieData[0].data[2];
             this.PieChartLabels = [
                 "Total confirmed",
                 "Total deceased",
                 "Total Recovered",
             ];
             this.barChartData[0].data = this.active;
-            console.log(this.active);
+            // console.log(this.active);
         });
     }
 }
