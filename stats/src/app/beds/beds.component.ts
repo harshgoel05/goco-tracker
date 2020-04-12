@@ -7,9 +7,7 @@ import { StoreService } from "../_services/store.service";
 })
 export class BedsComponent implements OnInit {
     beds: any;
-    constructor(private _service: StoreService) {}
-
-    ngOnInit() {
+    constructor(private _service: StoreService) {
         this._service.getbeds().subscribe(
             (res) => {
                 console.log(res);
@@ -20,4 +18,6 @@ export class BedsComponent implements OnInit {
             }
         );
     }
+
+    ngOnInit() {}
 }
