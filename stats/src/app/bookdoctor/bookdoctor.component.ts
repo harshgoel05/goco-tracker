@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
 import { FormGroup, FormControl } from "@angular/forms";
 import { StoreService } from "../_services/store.service";
+import { IfStmt } from "@angular/compiler";
 @Component({
     selector: "app-bookdoctor",
     templateUrl: "./bookdoctor.component.html",
@@ -8,6 +9,8 @@ import { StoreService } from "../_services/store.service";
 })
 export class BookdoctorComponent implements OnInit {
     states;
+    selectedProduct;
+    currentnum;
     patient = {
         name: "",
         contactnum: "",
@@ -17,9 +20,6 @@ export class BookdoctorComponent implements OnInit {
     contactform: FormGroup;
     ngOnInit() {}
     constructor(private _service: StoreService) {
-        this.contactform = new FormGroup({
-            state: new FormControl(null),
-        });
         this._service.getHelplines().subscribe(
             (res) => {
                 this.states = res;
@@ -29,9 +29,9 @@ export class BookdoctorComponent implements OnInit {
             }
         );
     }
-
-    get state(): string {
-        return this.contactform ? this.contactform.get("state").value : "";
+    changenum(data) {
+        this.currentnum =
+            data.target.options[data.target.options.selectedIndex].value;
     }
     submitform() {
         if (

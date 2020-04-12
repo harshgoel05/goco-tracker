@@ -94,3 +94,18 @@ p {
         margin-bottom: 20px;
     }
 }
+select {
+    background-color: #f08f6f;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    color: black;
+}
+select:focus,
+select:active {
+    background-color: #f08f6f;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    color: black;
+}
