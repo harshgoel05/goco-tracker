@@ -1,6 +1,4 @@
-/* .main{
-    background-color: #f7f7f8;
-} */
+
 .vl {
     border-left: 6px solid #1c84c6;
     height: 40px;
@@ -44,5 +42,15 @@
     padding: 20px;
     background-color: white;
     
+}
+
+.beds{
+    height: 500px;
+    overflow-y: scroll;
+    padding: 20px;
+    box-shadow: 1px 8px 20px grey;
+    margin: 30px;
+    
+    margin-left: 124px;
 }
 
