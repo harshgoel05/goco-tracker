@@ -11,18 +11,14 @@ import { DoctordashboardComponent } from "./doctordashboard/doctordashboard.comp
 import { CommonfooterComponent } from "./commonfooter/commonfooter.component";
 import { DoctorloginComponent } from "./doctorlogin/doctorlogin.component";
 import { StoreRegestrtionComponent } from "./store-regestrtion/store-regestrtion.component";
-import { ChartsModule} from 'ng2-charts'
-
-
-
-
-
-
+import { ChartsModule } from "ng2-charts";
 import { BookdoctorComponent } from "./bookdoctor/bookdoctor.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { StoreListComponent } from "./store-list/store-list.component";
-import { ChartsComponent } from './charts/charts.component';
-import { BedsComponent } from './beds/beds.component';
+import { ChartsComponent } from "./charts/charts.component";
+import { BedsComponent } from "./beds/beds.component";
+import { MapsComponent } from "./maps/maps.component";
+import { Error404Component } from "./error404/error404.component";
 @NgModule({
     declarations: [
         AppComponent,
@@ -37,6 +33,8 @@ import { BedsComponent } from './beds/beds.component';
         StoreListComponent,
         ChartsComponent,
         BedsComponent,
+        MapsComponent,
+        Error404Component,
     ],
     imports: [
         BrowserModule,
@@ -44,7 +42,7 @@ import { BedsComponent } from './beds/beds.component';
         HttpClientModule,
         FormsModule,
         ReactiveFormsModule,
-        ChartsModule
+        ChartsModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
