@@ -16,10 +16,9 @@ import { BookdoctorComponent } from "./bookdoctor/bookdoctor.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { StoreListComponent } from "./store-list/store-list.component";
 import { BedsComponent } from "./beds/beds.component";
-import { MapsComponent } from "./maps/maps.component";
 import { Error404Component } from "./error404/error404.component";
-import { WorldStatsComponent } from './world-stats/world-stats.component';
-import { TeamPageComponent } from './team-page/team-page.component';
+import { WorldStatsComponent } from "./world-stats/world-stats.component";
+import { TeamPageComponent } from "./team-page/team-page.component";
 @NgModule({
     declarations: [
         AppComponent,
@@ -33,7 +32,6 @@ import { TeamPageComponent } from './team-page/team-page.component';
         BookdoctorComponent,
         StoreListComponent,
         BedsComponent,
-        MapsComponent,
         Error404Component,
         WorldStatsComponent,
         TeamPageComponent,
