@@ -14,7 +14,9 @@ export class WorldStatsComponent implements OnInit {
   public totaldeceased;
   public totalrecovered;
   public totalactive;
-  public caseobject:any
+  public caseobject:any;
+  public countrywiseData;
+  
   
   constructor(private dataService: DataServiceService) {}
   //line Chart
@@ -91,7 +93,7 @@ export class WorldStatsComponent implements OnInit {
 
   ngOnInit() {
       this.getGlobalData();
-      this.getStateData();
+      this.getCountrywiseData();
       this.getDailyData();
       
   }
@@ -108,18 +110,12 @@ export class WorldStatsComponent implements OnInit {
     })
     console.log(this.caseobject)
   }
-  getStateData() {
-      this.dataService.getIndiaStateData().subscribe((res) => {
+  getCountrywiseData() {
+      this.dataService.getCounrtyWiseData().subscribe((res) => {
           // console.log(res);
-          let i = 0;
-          for (i = 0; i < res.length; i++) {
-              this.stateBarData[0].data.push(res[i].active);
-              this.stateBarChartLabels.push(res[i].statecode);
-          }
-
-          this.stateBarChartLabels.reverse();
-          this.stateBarData[0].data.reverse();
-          this.stateBarData[0].data.pop();
+          this.countrywiseData=res
+          this.countrywiseData.reverse()
+          
       });
   }
   getDailyData() {

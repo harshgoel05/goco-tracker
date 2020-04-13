@@ -39,29 +39,14 @@
     <section class="chart">
       <div class="container">
         <div class="row">
-          <div class="col">
-            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
-              [legend]="barChartLegend" [colors]="BarChartColors" [chartType]="barChartType">
-            </canvas>
-          </div>
+          
           <div class="col">
             <canvas baseChart [datasets]="PieData" [labels]="PieChartLabels" [options]="pieChartOptions"
               [colors]="pieChartColors" [chartType]="PieChartType">
             </canvas>
           </div>
         </div>
-        <div class="bar">
-  
-          <div class="row">
-            <h1 style="margin-left: 35%; margin-bottom: 10px;"><span style="color: #f46232;">State-Wise</span> Analysis
-            </h1>
-  
-            <canvas baseChart [datasets]="stateBarData" [labels]="stateBarChartLabels" [options]="stateBarChartOptions"
-              [legend]="stateBarChartLegend" [chartType]="stateBarChartType">
-            </canvas>
-          </div>
-  
-        </div>
+        
   
   
   
@@ -70,7 +55,7 @@
   
     </section>
  
-    <h1><span style="color: #f46232; margin-left: 80px; margin-top: 20px;">Coutrwise</span> Data</h1>
+    <h1><span style="color: #f46232; margin-left: 80px; margin-top: 20px;">Coutrywise</span> Data</h1>
     <hr style="width: 90vw;">
     <div class="beds container">
         <table class="table table-striped">
@@ -83,7 +68,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let p of caseobject">
+                <tr *ngFor="let p of countrywiseData">
                     <th scope="row">{{p.country}}</th>
                     <td>{{p.cases}}</td>
                     <td>{{p.deaths}}</td>
