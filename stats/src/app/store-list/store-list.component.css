@@ -87,12 +87,18 @@ h2 {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
     .middlebox {
         padding: 0 !important;
         margin-top: 25px;
     }
     table {
         overflow: scroll;
+    }
+    #myModal {
+        height: 80%;
+    }
+    * {
+        overflow-x: auto;
     }
 }
