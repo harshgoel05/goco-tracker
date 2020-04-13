@@ -57,4 +57,10 @@ tr::nth-last-child(n) {
   color: rgb(214, 92, 21);
 }
 
-
+.map{
+  box-shadow: 1px 8px 20px grey;
+  margin-top: 20px;
+  padding: 25px;
+  height: 600px;
+  margin-left: 9%;
+}

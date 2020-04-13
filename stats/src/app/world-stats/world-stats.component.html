@@ -35,25 +35,13 @@
         </div>
       </div>
     </div>
-    <app-maps></app-maps>
-    <section class="chart">
-      <div class="container">
-        <div class="row">
-          
-          <div class="col">
-            <canvas baseChart [datasets]="PieData" [labels]="PieChartLabels" [options]="pieChartOptions"
-              [colors]="pieChartColors" [chartType]="PieChartType">
-            </canvas>
-          </div>
-        </div>
-        
-  
-  
-  
-  
-      </div>
-  
-    </section>
+
+    <div class="map container">
+      <app-maps></app-maps>
+    </div>
+    
+    
+
  
     <h1><span style="color: #f46232; margin-left: 80px; margin-top: 20px;">Coutrywise</span> Data</h1>
     <hr style="width: 90vw;">
