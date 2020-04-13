@@ -10,9 +10,9 @@ export class DataServiceService {
     private globalDataURL1 =
         "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/04-08-2020.csv";
     private IndiaDataURL = "https://api.covid19india.org/data.json";
-    private baseurl = "http://localhost:3000/api";
-    private countrywiseData =  this.baseurl+"/covidWorldCountryWise";
-    private globalDataURL = this.baseurl + "/covidWorld"
+    private baseurl = "/api";
+    private countrywiseData = this.baseurl + "/covidWorldCountryWise";
+    private globalDataURL = this.baseurl + "/covidWorld";
 
     constructor(private http: HttpClient) {}
     getGlobalData() {
@@ -22,12 +22,12 @@ export class DataServiceService {
             })
         );
     }
-    getCounrtyWiseData():Observable<any>{
+    getCounrtyWiseData(): Observable<any> {
         return this.http.get(this.countrywiseData).pipe(
-            map( arr => {
-                 return JSON.parse(JSON.stringify(arr))
+            map((arr) => {
+                return JSON.parse(JSON.stringify(arr));
             })
-        )
+        );
     }
     getIndiaStateData() {
         return this.http.get<any>(this.IndiaDataURL).pipe(
@@ -74,5 +74,4 @@ export class DataServiceService {
             `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=01b316efd3a546e1ae8895b4328d8e6a`
         );
     }
-
 }
