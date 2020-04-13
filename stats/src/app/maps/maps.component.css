@@ -1,6 +1,12 @@
 #chartdiv {
-    width: 80%;
+    width: 70%;
     margin: 60px;
-    margin-left: 200px;
-    height: 90vh;
+    height: 80vh;
+}
+@media (max-width: 800px) {
+    #chartdiv {
+        width: 98%;
+        margin: 0;
+        height: 300px;
+    }
 }
