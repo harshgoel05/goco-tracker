@@ -15,7 +15,6 @@ import { ChartsModule } from "ng2-charts";
 import { BookdoctorComponent } from "./bookdoctor/bookdoctor.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { StoreListComponent } from "./store-list/store-list.component";
-import { ChartsComponent } from "./charts/charts.component";
 import { BedsComponent } from "./beds/beds.component";
 import { MapsComponent } from "./maps/maps.component";
 import { Error404Component } from "./error404/error404.component";
@@ -31,7 +30,6 @@ import { Error404Component } from "./error404/error404.component";
         StoreRegestrtionComponent,
         BookdoctorComponent,
         StoreListComponent,
-        ChartsComponent,
         BedsComponent,
         MapsComponent,
         Error404Component,
