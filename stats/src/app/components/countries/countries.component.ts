@@ -11,6 +11,7 @@ export class CountriesComponent implements OnInit {
     public totalconfirmed;
     public totaldeceased;
     public totalrecovered;
+    public active_cases;
     city;
     state;
     constructor(private dataService: DataServiceService) {}
@@ -112,7 +113,7 @@ export class CountriesComponent implements OnInit {
     }
     getStateData() {
         this.dataService.getIndiaStateData().subscribe((res) => {
-            // console.log(res);
+             //console.log(res);
             let i = 0;
             for (i = 0; i < res.length; i++) {
                 this.stateBarData[0].data.push(res[i].confirmed);
@@ -120,31 +121,35 @@ export class CountriesComponent implements OnInit {
                 this.stateBarData[2].data.push(res[i].recovered);
                 this.stateBarChartLabels.push(res[i].statecode);
             }
+            this.totalconfirmed = res[0].confirmed;
+            this.totaldeceased = res[0].deaths 
+            this.totalrecovered = res[0].recovered;
+
 
             this.stateBarChartLabels.reverse();
             this.stateBarData[0].data.reverse();
             this.stateBarData[1].data.reverse()
-                this.stateBarData[2].data.reverse()
+            this.stateBarData[2].data.reverse()
             this.stateBarData[0].data.pop();
+            this.stateBarChartLabels.pop();
+            this.PieData[0].data = [
+                res[0].active,
+                this.totaldeceased,
+                this.totalrecovered,
+            ];
         });
     }
     getDailyData() {
         this.dataService.getDailyData().subscribe((res) => {
-            // console.log(res);
+            //console.log(res);
             let i = 0;
             for (i = 0; i < res.length; i++) {
                 this.active.push(res[i].totalconfirmed);
                 this.barChartLabels.push(res[i].date);
             }
-            this.PieData[0].data = [
-                this.active[i - 1],
-                res[i - 1].totaldeceased,
-                res[i - 1].totalrecovered,
-            ];
-            this.totalconfirmed = this.active[i - 1];
-            this.totaldeceased = this.PieData[0].data[1];
-            this.totalrecovered = this.PieData[0].data[2];
-            this.PieChartLabels = [
+           
+            
+           this.PieChartLabels = [
                 "Total Active",
                 "Total deceased",
                 "Total Recovered",
