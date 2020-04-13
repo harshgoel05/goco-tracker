@@ -7,18 +7,27 @@ import { catchError } from "rxjs/operators";
     providedIn: "root",
 })
 export class DataServiceService {
-    private globalDataURL =
+    private globalDataURL1 =
         "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/04-08-2020.csv";
     private IndiaDataURL = "https://api.covid19india.org/data.json";
     private baseurl = "http://localhost:3000/api";
+    private countrywiseData =  this.baseurl+"/covidWorldCountryWise";
+    private globalDataURL = this.baseurl + "/covidWorld"
 
     constructor(private http: HttpClient) {}
     getGlobalData() {
-        return this.http.get(this.globalDataURL, { responseType: "text" }).pipe(
+        return this.http.get(this.globalDataURL).pipe(
             map((result) => {
                 return result;
             })
         );
+    }
+    getCounrtyWiseData():Observable<any>{
+        return this.http.get(this.countrywiseData).pipe(
+            map( arr => {
+                 return JSON.parse(JSON.stringify(arr))
+            })
+        )
     }
     getIndiaStateData() {
         return this.http.get<any>(this.IndiaDataURL).pipe(
@@ -64,4 +73,5 @@ export class DataServiceService {
         return this.http.get<any>('https://api.opencagedata.com/geocode/v1/json?q=22.7163+75.8316&key=01b316efd3a546e1ae8895b4328d8e6a')
 
     }
+
 }

@@ -1,0 +1,97 @@
+<div class="main">
+    <app-navbar></app-navbar>
+    <div class="heading-top">
+      <h1><span style="color: #f46232; margin-left: 80px;">Over</span>view</h1>
+      <hr style="width: 90vw;">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="heading">
+            <div class="vl">
+              <h3 style="margin-left: 10px; color: #1c84c6;">Total Cases</h3>
+            </div>
+            <hr>
+            <h2 style="margin-left: 40%;">{{totalconfirmed}}</h2>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="heading">
+            <div class="vl1">
+              <h3 style="margin-left: 10px; color: #f14338;">Total Deaths</h3>
+            </div>
+            <hr>
+            <h2 style="margin-left: 40%;">{{totaldeceased}}</h2>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="heading">
+            <div class="vl2">
+              <h3 style="margin-left: 10px; color: #78bd78;">Total Recovered</h3>
+            </div>
+            <hr>
+            <h2 style="margin-left: 40%;">{{totalrecovered}}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-maps></app-maps>
+    <section class="chart">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+              [legend]="barChartLegend" [colors]="BarChartColors" [chartType]="barChartType">
+            </canvas>
+          </div>
+          <div class="col">
+            <canvas baseChart [datasets]="PieData" [labels]="PieChartLabels" [options]="pieChartOptions"
+              [colors]="pieChartColors" [chartType]="PieChartType">
+            </canvas>
+          </div>
+        </div>
+        <div class="bar">
+  
+          <div class="row">
+            <h1 style="margin-left: 35%; margin-bottom: 10px;"><span style="color: #f46232;">State-Wise</span> Analysis
+            </h1>
+  
+            <canvas baseChart [datasets]="stateBarData" [labels]="stateBarChartLabels" [options]="stateBarChartOptions"
+              [legend]="stateBarChartLegend" [chartType]="stateBarChartType">
+            </canvas>
+          </div>
+  
+        </div>
+  
+  
+  
+  
+      </div>
+  
+    </section>
+ 
+    <h1><span style="color: #f46232; margin-left: 80px; margin-top: 20px;">Coutrwise</span> Data</h1>
+    <hr style="width: 90vw;">
+    <div class="beds container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Country</th>
+                    <th scope="col">Total Cases</th>
+                    <th scope="col">Total Deaths</th>
+                    <th scope="col">Total Recovered</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of caseobject">
+                    <th scope="row">{{p.country}}</th>
+                    <td>{{p.cases}}</td>
+                    <td>{{p.deaths}}</td>
+                    <td>{{p.recovered}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   
+  
+  </div>

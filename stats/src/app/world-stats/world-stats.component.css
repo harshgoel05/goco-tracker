@@ -1,0 +1,60 @@
+
+.vl {
+    border-left: 6px solid #1c84c6;
+    height: 40px;
+  }
+
+  .vl1 {
+    border-left: 6px solid #f14338;
+    height: 40px;
+  }
+
+  .vl2 {
+    border-left: 6px solid #78bd78;
+    height: 40px;
+  }
+
+.col-sm{
+    margin-left: 20px;
+    box-shadow: 1px 8px 20px grey;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: white;
+}
+
+.chart{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.col{
+    box-shadow: 1px 8px 20px grey;
+    margin-left: 20px;
+    padding: 15px;
+    background-color: white;
+
+}
+
+.bar .row{
+    margin-top: 25px;
+    margin-left: 7px;
+    box-shadow: 1px 8px 20px grey;
+    padding: 20px;
+    background-color: white;
+    
+}
+
+.beds{
+    height: 500px;
+    overflow-y: scroll;
+    padding: 20px;
+    box-shadow: 1px 8px 20px grey;
+    margin: 30px;
+    
+    margin-left: 124px;
+}
+tr::nth-last-child(n) {
+  color: rgb(214, 92, 21);
+}
+
+

@@ -11,6 +11,7 @@ import { StoreListComponent } from "./store-list/store-list.component";
 import { BedsComponent } from "./beds/beds.component";
 import { Error404Component } from "./error404/error404.component";
 import { MapsComponent } from "./maps/maps.component";
+import { WorldStatsComponent } from './world-stats/world-stats.component';
 
 const routes: Routes = [
     { path: "", component: HomeComponent },
@@ -26,6 +27,7 @@ const routes: Routes = [
     { path: "stores", component: StoreListComponent },
     { path: "beds", component: BedsComponent },
     { path: "maps", component: MapsComponent },
+    { path: "worldstats", component:WorldStatsComponent},
     { path: "**", component: Error404Component },
 ];
 

@@ -19,6 +19,7 @@ import { ChartsComponent } from "./charts/charts.component";
 import { BedsComponent } from "./beds/beds.component";
 import { MapsComponent } from "./maps/maps.component";
 import { Error404Component } from "./error404/error404.component";
+import { WorldStatsComponent } from './world-stats/world-stats.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -35,6 +36,7 @@ import { Error404Component } from "./error404/error404.component";
         BedsComponent,
         MapsComponent,
         Error404Component,
+        WorldStatsComponent,
     ],
     imports: [
         BrowserModule,

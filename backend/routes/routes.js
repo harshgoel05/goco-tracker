@@ -226,7 +226,7 @@ Routes.route("/covidWorld").get((req, response) => {
 // World Data Country Wise
 Routes.route("/covidWorldCountryWise").get((req, response) => {
     try {
-        axios.get("https://corona.lmao.ninja/v2/jhucsse").then((res) => {
+        axios.get("https://corona.lmao.ninja/countries?sort=country").then((res) => {
             // console.log(res.data.data);
             response.status(200).send(res.data);
         });
