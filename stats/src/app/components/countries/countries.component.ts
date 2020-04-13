@@ -40,11 +40,15 @@ export class CountriesComponent implements OnInit {
     public stateBarChartLabels = new Array();
     public stateBarChartType: ChartType = "bar";
     public stateBarChartLegend = true;
-    public stateBarData = [{ data: [], label: "Total Confirmed  " }];
+    public stateBarData = [{ data: [], label: "Total Confirmed " },{label:"Toatal Deaths",data: []},{label:"Toatal Recovered",data: []}];
     public stateBarChartOptions = {
         scaleShowVerticalLines: false,
         responsive: true,
         options: {
+            scales: {
+                xAxes: [{ stacked: true }],
+                yAxes: [{ stacked: true }]
+              },
             legend: {
                 labels: {
                     // This more specific font property overrides the global property
@@ -108,15 +112,19 @@ export class CountriesComponent implements OnInit {
     }
     getStateData() {
         this.dataService.getIndiaStateData().subscribe((res) => {
-            // console.log(res);
+            console.log(res);
             let i = 0;
             for (i = 0; i < res.length; i++) {
-                this.stateBarData[0].data.push(res[i].active);
+                this.stateBarData[0].data.push(res[i].confirmed);
+                this.stateBarData[1].data.push(res[i].deaths);
+                this.stateBarData[2].data.push(res[i].recovered);
                 this.stateBarChartLabels.push(res[i].statecode);
             }
 
             this.stateBarChartLabels.reverse();
             this.stateBarData[0].data.reverse();
+            this.stateBarData[1].data.reverse()
+                this.stateBarData[2].data.reverse()
             this.stateBarData[0].data.pop();
         });
     }
@@ -137,7 +145,7 @@ export class CountriesComponent implements OnInit {
             this.totaldeceased = this.PieData[0].data[1];
             this.totalrecovered = this.PieData[0].data[2];
             this.PieChartLabels = [
-                "Total confirmed",
+                "Total Active",
                 "Total deceased",
                 "Total Recovered",
             ];
