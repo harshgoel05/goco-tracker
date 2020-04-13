@@ -9,7 +9,7 @@
     <h6 style="float: right;">Your location :<span style="color: #f46232;"> {{state}}</span>
     </h6>
     <hr style="width: 90vw;">
-    
+
   </div>
   <div class="container">
     <div class="row">
@@ -60,7 +60,9 @@
       <div class="bar">
 
         <div class="row">
-            <div class="mid"><h1><span style="color: #f46232;">State-Wise</span> Analysis</h1></div>
+          <div class="mid">
+            <h1><span style="color: #f46232;">State-Wise</span> Analysis</h1>
+          </div>
 
           <canvas baseChart [datasets]="stateBarData" [labels]="stateBarChartLabels" [options]="stateBarChartOptions"
             [legend]="stateBarChartLegend" [chartType]="stateBarChartType">
@@ -91,17 +93,20 @@
 
 <div class="select">
 
-    
-    <!-- <div class="container">
+
+  <!-- <div class="container">
       <div class="row">
         
         <img src="../../../assets/images/Image.svg" class="foot-im" alt="globe"><span><h1 class="end">Check World Statastics</h1></span>
     </div> -->
 
-    <div class="container">
-      <div class="row">
-        
-        <img src="../../../assets/images/Image.svg" class="foot-im" alt="globe"><span><button class="gc-button" routerLink="/worldstats"><h1>Check World Statastics</h1></button></span>
+  <div class="container">
+    <div class="row">
+
+      <img src="../../../assets/images/Image.svg" class="foot-im" alt="globe"><span><button
+          class="gc-button specialcheckworld" routerLink="/worldstats">
+          <h1 class="checkworld">Check World Statastics</h1>
+        </button></span>
     </div>
-  
-</div>
+
+  </div>

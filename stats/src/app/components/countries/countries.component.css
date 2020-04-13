@@ -46,15 +46,13 @@
     background-color: white;
 }
 
-
-
 .beds {
     height: 500px;
     overflow-y: scroll !important;
 }
-.mid{
+.mid {
     margin-left: 35%;
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 .head-bw {
     color: #f46232;
@@ -65,10 +63,10 @@
     margin-top: -20px;
 }
 
-.foot-im{
+.foot-im {
     height: 280px;
 }
-.select .row{
+.select .row {
     box-shadow: 1px 8px 20px grey;
     margin-left: 10px;
     margin-bottom: 30px;
@@ -76,7 +74,7 @@
     padding-left: 100px;
     border-radius: 20px;
 }
-.gc-button{
+.gc-button {
     margin-top: 80px;
     margin-left: 70px;
     background-color: #f46232;
@@ -85,14 +83,14 @@
     border-radius: 10px;
 }
 
-@media (max-width: 850px){
-    .select .row{
+@media (max-width: 850px) {
+    .select .row {
         padding-left: 10px;
     }
-    .foot-im{
-        height:150px;
+    .foot-im {
+        height: 150px;
     }
-    .gc-button{
+    .gc-button {
         margin-left: 10px;
         margin-top: 30px;
     }
@@ -111,7 +109,6 @@
         margin-right: 15px;
     }
 
-    
     .bar .row {
         margin-right: 5px;
         padding: 0;
@@ -127,18 +124,23 @@
     }
 }
 
-@media (max-width: 500px){
-    .foot-im{
+@media (max-width: 500px) {
+    .foot-im {
         margin-left: 30%;
     }
 
-    .select .row{
+    .select .row {
         padding-left: 10px;
         margin-right: 10px;
     }
-    .gc-button{
+    .gc-button {
         padding: 5px;
         margin-right: 10px;
     }
-
+    .checkworld {
+        font-size: 20px;
+    }
+    .specialcheckworld {
+        margin-left: 30px;
+    }
 }
