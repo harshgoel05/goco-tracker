@@ -39,41 +39,28 @@
     <app-maps></app-maps>
   </div>
 
-  <section class="chart">
-    <div class="container">
-      <div class="row">
 
-        <div class="col">
-          <canvas baseChart [datasets]="PieData" [labels]="PieChartLabels" [options]="pieChartOptions"
-            [colors]="pieChartColors" [chartType]="PieChartType">
-          </canvas>
-        </div>
-      </div>
-
-      <h1 class="specialbeds" style=" margin-left: 80px; margin-top: 20px;"><span
-          style="color: #f46232;">Coutrywise</span>
-        Data</h1>
-      <hr style="width: 90vw;">
-      <div class="beds container">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">Country</th>
-              <th scope="col">Total Cases</th>
-              <th scope="col">Total Deaths</th>
-              <th scope="col">Total Recovered</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let p of countrywiseData">
-              <th scope="row">{{p.country}}</th>
-              <td>{{p.cases}}</td>
-              <td>{{p.deaths}}</td>
-              <td>{{p.recovered}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-
-    </div>
+  <h1 class="specialbeds" style=" margin-left: 80px; margin-top: 20px;"><span style="color: #f46232;">Coutrywise</span>
+    Data</h1>
+  <hr style="width: 90vw;">
+  <div class="beds container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Country</th>
+          <th scope="col">Total Cases</th>
+          <th scope="col">Total Deaths</th>
+          <th scope="col">Total Recovered</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of countrywiseData">
+          <th scope="row">{{p.country}}</th>
+          <td>{{p.cases}}</td>
+          <td>{{p.deaths}}</td>
+          <td>{{p.recovered}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
