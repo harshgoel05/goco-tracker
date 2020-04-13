@@ -62,14 +62,14 @@ export class MapsComponent implements OnInit {
 
         // add heat legend
         var heatLegend = chart.chartContainer.createChild(am4maps.HeatLegend);
-        heatLegend.valign = "bottom";
-        heatLegend.align = "left";
-        heatLegend.width = am4core.percent(100);
+        // heatLegend.valign = "bottom";
+        // heatLegend.align = "center";
+        // heatLegend.width = am4core.percent(80);
         heatLegend.series = polygonSeries;
         heatLegend.orientation = "horizontal";
-        heatLegend.padding(20, 20, 20, 20);
-        heatLegend.valueAxis.renderer.labels.template.fontSize = 10;
-        heatLegend.valueAxis.renderer.minGridDistance = 40;
+        // heatLegend.padding(20, 20, 20, 20);
+        // heatLegend.valueAxis.renderer.labels.template.fontSize = 10;
+        // heatLegend.valueAxis.renderer.minGridDistance = 40;
 
         polygonSeries.mapPolygons.template.events.on("over", (event) => {
             handleHover(event.target);

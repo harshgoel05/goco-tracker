@@ -2,6 +2,8 @@
   <app-navbar></app-navbar>
   <div class="heading-top">
     <h1><span style="color: #f46232; margin-left: 80px;">Over</span>view</h1>
+    <h6 style="float: right;">Your location :<span style="color: #f46232;"> {{state}}</span>
+    </h6>
     <hr style="width: 90vw;">
   </div>
   <div class="container">
@@ -13,6 +15,7 @@
           </div>
           <hr>
           <h2 style="margin-left: 40%;">{{totalconfirmed}}</h2>
+          <h6 style="text-align: center; color:#f14338;">{{state}} : 9567</h6>
         </div>
       </div>
       <div class="col-sm">
@@ -22,6 +25,7 @@
           </div>
           <hr>
           <h2 style="margin-left: 40%;">{{totaldeceased}}</h2>
+          <h6 style="text-align: center; color:#f14338;">{{state}} : 9567</h6>
         </div>
       </div>
       <div class="col-sm">
@@ -31,6 +35,7 @@
           </div>
           <hr>
           <h2 style="margin-left: 40%;">{{totalrecovered}}</h2>
+          <h6 style="text-align: center; color:#f14338;">{{state}} : 9567</h6>
         </div>
       </div>
     </div>
@@ -60,6 +65,11 @@
             [legend]="stateBarChartLegend" [chartType]="stateBarChartType">
           </canvas>
         </div>
+        <div class="row">
+          <div class="beds container">
+            <app-beds></app-beds>
+          </div>
+        </div>
 
       </div>
 
@@ -70,11 +80,10 @@
 
   </section>
 
-  <h1><span style="color: #f46232; margin-left: 80px; margin-top: 20px;">Availability</span> of Beds and Hospitals</h1>
+  <!-- <h1><span style="color: #f46232; margin-left: 80px; margin-top: 20px;">Availability</span> of Beds and Hospitals</h1>
   <hr style="width: 90vw;">
   <div class="beds container">
-    <app-beds></app-beds>
-  </div>
- 
+    <app-beds></app-beds> -->
+  <!-- </div> -->
 
 </div>

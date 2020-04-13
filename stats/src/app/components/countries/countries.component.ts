@@ -11,6 +11,8 @@ export class CountriesComponent implements OnInit {
     public totalconfirmed;
     public totaldeceased;
     public totalrecovered;
+    city;
+    state;
     constructor(private dataService: DataServiceService) {}
     public barChartOptions = {
         responsive: true,
@@ -89,6 +91,24 @@ export class CountriesComponent implements OnInit {
     ngOnInit() {
         this.getStateData();
         this.getDailyData();
+        this.geoLocation();
+    }
+    geoLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                this.dataService
+                    .getLocation(
+                        position.coords.latitude,
+                        position.coords.longitude
+                    )
+                    .subscribe((res) => {
+                        this.city = res.results[0].components.city;
+                        this.state = res.results[0].components.state;
+                        console.log(res.results[0].components);
+                    });
+                console.log("position", position);
+            });
+        }
     }
     getStateData() {
         this.dataService.getIndiaStateData().subscribe((res) => {

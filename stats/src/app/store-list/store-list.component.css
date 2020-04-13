@@ -14,7 +14,7 @@
 }
 
 .image {
-    height: 78vh;
+    height: 75vh;
     margin-top: 9%;
     margin-left: 35%;
 }
@@ -22,8 +22,10 @@
     float: left;
     background: white;
     width: 50%;
+    height: 400px;
+    overflow-y: scroll;
     margin-left: 15vw;
-    margin-top: 50px;
+    margin-top: 40px;
     box-shadow: 1px 8px 20px grey;
     padding-left: 40px;
     padding-right: 40px;

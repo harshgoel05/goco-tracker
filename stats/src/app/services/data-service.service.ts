@@ -69,9 +69,10 @@ export class DataServiceService {
         console.log("From Auth Service", user);
         return this.http.post<any>(this.baseurl + "/login", user);
     }
-    getLocation(lang,lat){
-        return this.http.get<any>('https://api.opencagedata.com/geocode/v1/json?q=22.7163+75.8316&key=01b316efd3a546e1ae8895b4328d8e6a')
-
+    getLocation(lat, long) {
+        return this.http.get<any>(
+            `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=01b316efd3a546e1ae8895b4328d8e6a`
+        );
     }
 
 }
