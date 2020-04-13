@@ -40,7 +40,7 @@ export class CountriesComponent implements OnInit {
     public stateBarChartLabels = new Array();
     public stateBarChartType: ChartType = "bar";
     public stateBarChartLegend = true;
-    public stateBarData = [{ data: [], label: "Total Confirmed " },{label:"Toatal Deaths",data: []},{label:"Toatal Recovered",data: []}];
+    public stateBarData = [{ data: [], label: "Total Confirmed " },{label:"Total Deaths",data: []},{label:"Total Recovered",data: []}];
     public stateBarChartOptions = {
         scaleShowVerticalLines: false,
         responsive: true,

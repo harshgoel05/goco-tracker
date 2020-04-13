@@ -50,7 +50,10 @@
     height: 500px;
     overflow-y: scroll !important;
 }
-
+.mid{
+    margin-left: 35%;
+  margin-bottom: 10px;
+}
 .head-bw {
     color: #f46232;
     margin-left: 80px;
@@ -71,6 +74,8 @@
     .col-sm {
         margin-right: 15px;
     }
+
+    
     .bar .row {
         margin-right: 5px;
         padding: 0;
