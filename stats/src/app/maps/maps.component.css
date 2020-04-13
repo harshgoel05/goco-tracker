@@ -5,8 +5,6 @@
 }
 @media (max-width: 800px) {
     #chartdiv {
-        width: 98%;
-        margin: 0;
-        height: 300px;
+        display: none;
     }
 }

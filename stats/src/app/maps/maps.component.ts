@@ -3,37 +3,39 @@ import * as am4core from "@amcharts/amcharts4/core";
 import * as am4maps from "@amcharts/amcharts4/maps";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import am4geodata_worldLow from "@amcharts/amcharts4-geodata/worldLow";
-import { DataServiceService } from '../services/data-service.service';
+import { DataServiceService } from "../services/data-service.service";
 @Component({
     selector: "app-maps",
     templateUrl: "./maps.component.html",
     styleUrls: ["./maps.component.css"],
 })
 export class MapsComponent implements OnInit {
-    private countrywiseData:any
-    constructor( private dataservice:DataServiceService) {}
+    private countrywiseData: any;
+    constructor(private dataservice: DataServiceService) {}
     ngOnInit() {
-        this.dataservice.getCounrtyWiseData()
-        .subscribe(res => {
-            console.log(res)
-            this.countrywiseData=res
-            let countryInfo:any
-            
-            
+        this.dataservice.getCounrtyWiseData().subscribe((res) => {
+            // console.log(res);
+            this.countrywiseData = res;
+            let countryInfo: any;
+
             let i;
-            let MapData = new Array
-            for(i=0;i<this.countrywiseData.length;i++){
-                countryInfo=this.countrywiseData[i].countryInfo
-                if(this.countrywiseData[i].country=="USA")
-                {
-                    MapData.push({id:countryInfo.iso2,value:this.countrywiseData[i].cases,fill: am4core.color("black")})
-                }
-                else
-                MapData.push({id:countryInfo.iso2,value:this.countrywiseData[i].cases})
-                
+            let MapData = new Array();
+            for (i = 0; i < this.countrywiseData.length; i++) {
+                countryInfo = this.countrywiseData[i].countryInfo;
+                if (this.countrywiseData[i].country == "USA") {
+                    MapData.push({
+                        id: countryInfo.iso2,
+                        value: this.countrywiseData[i].cases,
+                        fill: am4core.color("black"),
+                    });
+                } else
+                    MapData.push({
+                        id: countryInfo.iso2,
+                        value: this.countrywiseData[i].cases,
+                    });
             }
-            polygonSeries.data=MapData
-        })
+            polygonSeries.data = MapData;
+        });
         am4core.useTheme(am4themes_animated);
 
         var chart = am4core.create("chartdiv", am4maps.MapChart);
@@ -55,7 +57,7 @@ export class MapsComponent implements OnInit {
         polygonSeries.heatRules.push({
             property: "fill",
             target: polygonSeries.mapPolygons.template,
-            min: am4core.color('grey'),
+            min: am4core.color("grey"),
             max: am4core.color("rgb(245,97,51)"),
         });
         polygonSeries.useGeodata = true;
@@ -94,12 +96,9 @@ export class MapsComponent implements OnInit {
 
         chart.zoomControl = new am4maps.ZoomControl();
         chart.zoomControl.valign = "top";
-        
+
         // life expectancy data
         polygonSeries.data = [];
-       
-  
-        
 
         // excludes Antarctica
         polygonSeries.exclude = ["AQ"];

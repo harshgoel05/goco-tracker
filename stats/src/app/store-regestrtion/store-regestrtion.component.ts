@@ -21,7 +21,7 @@ export class StoreRegestrtionComponent implements OnInit {
     submitform() {
         this._storeservice.addStore(this.store).subscribe(
             (res) => {
-                console.log("Added Sucessfully");
+                // console.log("Added Sucessfully");
                 alert("Sucessfully added the store! Thank you.");
             },
             (err) => {

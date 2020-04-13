@@ -17,10 +17,10 @@ export class DoctorloginComponent implements OnInit {
 
     ngOnInit() {}
     login(form) {
-        console.log(form.value); // 1. Goes to AuthService function LoginUser
+        // console.log(form.value);
         this.dataservice.loginUser(form.value).subscribe(
             (res) => {
-                console.log("Loggedin Sucessfully", res);
+                // console.log("Loggedin Sucessfully", res);
                 localStorage.setItem("token", res.token);
                 this._router.navigate(["/admin"]);
             },

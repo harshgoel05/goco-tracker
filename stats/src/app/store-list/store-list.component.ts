@@ -16,7 +16,7 @@ export class StoreListComponent implements OnInit {
     ) {
         this._service.getStoreList().subscribe(
             (res) => {
-                console.log(res);
+                // console.log(res);
                 this.storelist = res;
             },
             (err) => {
@@ -39,9 +39,9 @@ export class StoreListComponent implements OnInit {
                     .subscribe((res) => {
                         this.city = res.results[0].components.city;
                         this.state = res.results[0].components.state;
-                        console.log(res.results[0].components);
+                        // console.log(res.results[0].components);
                     });
-                console.log("position", position);
+                // console.log("position", position);
             });
         }
     }

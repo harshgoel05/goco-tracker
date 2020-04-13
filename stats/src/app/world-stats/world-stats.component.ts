@@ -108,7 +108,7 @@ export class WorldStatsComponent implements OnInit {
       this.totalrecovered=this.caseobject.recovered
       this.totalactive=this.caseobject.active
     })
-    console.log(this.caseobject)
+    // console.log(this.caseobject)
   }
   getCountrywiseData() {
       this.dataService.getCounrtyWiseData().subscribe((res) => {

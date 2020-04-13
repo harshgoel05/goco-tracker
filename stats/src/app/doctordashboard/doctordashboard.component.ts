@@ -11,7 +11,7 @@ export class DoctordashboardComponent implements OnInit {
     ngOnInit() {
         this._service.getPatients().subscribe(
             (res) => {
-                console.log(res);
+                // console.log(res);
                 this.patients = res;
             },
             (error) => {

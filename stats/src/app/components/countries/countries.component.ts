@@ -104,15 +104,15 @@ export class CountriesComponent implements OnInit {
                     .subscribe((res) => {
                         this.city = res.results[0].components.city;
                         this.state = res.results[0].components.state;
-                        console.log(res.results[0].components);
+                        // console.log(res.results[0].components);
                     });
-                console.log("position", position);
+                // console.log("position", position);
             });
         }
     }
     getStateData() {
         this.dataService.getIndiaStateData().subscribe((res) => {
-            console.log(res);
+            // console.log(res);
             let i = 0;
             for (i = 0; i < res.length; i++) {
                 this.stateBarData[0].data.push(res[i].confirmed);

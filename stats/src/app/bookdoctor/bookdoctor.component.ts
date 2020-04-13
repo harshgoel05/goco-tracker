@@ -43,7 +43,7 @@ export class BookdoctorComponent implements OnInit {
         ) {
             alert("Please fill all details!");
         } else {
-            console.log(this.patient);
+            // console.log(this.patient);
             this._service.addPatient(this.patient).subscribe(
                 (res) => {
                     alert("Added Patient Record");

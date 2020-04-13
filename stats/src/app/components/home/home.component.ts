@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
         // this.geoLocation();
     }
     scrollToElement($element): void {
-        console.log($element);
+        // console.log($element);
         $element.scrollIntoView({
             behavior: "smooth",
             block: "start",
