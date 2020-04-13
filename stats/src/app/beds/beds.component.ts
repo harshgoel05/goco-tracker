@@ -7,22 +7,20 @@ import { map } from "rxjs/operators";
     styleUrls: ["./beds.component.css"],
 })
 export class BedsComponent implements OnInit {
-    beds: any
-    bedsarray:any
+    beds: any;
+    bedsarray: any;
 
     constructor(private _service: StoreService) {}
 
     ngOnInit() {
         this._service.getbeds().subscribe(
             (res) => {
-                this.beds=res
-                this.bedsarray=this.beds.regional
+                this.beds = res;
+                this.bedsarray = this.beds.regional;
             },
             (error) => {
-                console.log("Error while getting beds database");
+                console.log("Error while getting beds database", error);
             }
         );
     }
-
-    
 }
