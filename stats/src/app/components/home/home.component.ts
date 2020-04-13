@@ -18,12 +18,7 @@ export class HomeComponent implements OnInit {
         this.dataService.getGlobalData().subscribe({
             next: (result) => {},
         });
-        this.geoLocation();
-        this.dataService.getLocation(this.lat, this.lng).subscribe((res) => {
-            this.city = res.results[0].components.city;
-            this.state = res.results[0].components.state;
-            console.log(res.results[0].components);
-        });
+        // this.geoLocation();
     }
     scrollToElement($element): void {
         console.log($element);
@@ -33,15 +28,24 @@ export class HomeComponent implements OnInit {
             inline: "nearest",
         });
     }
-    geoLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition((position) => {
-                this.lat = position.coords.latitude;
-                this.lng = position.coords.longitude;
-                this.zoom = 16;
-
-                console.log("position", position);
-            });
-        }
-    }
+    // geoLocation() {
+    //     if (navigator.geolocation) {
+    //         navigator.geolocation.getCurrentPosition((position) => {
+    //             this.lat = position.coords.latitude;
+    //             this.lng = position.coords.longitude;
+    //             this.zoom = 16;
+    //             this.dataService
+    //                 .getLocation(
+    //                     position.coords.latitude,
+    //                     position.coords.longitude
+    //                 )
+    //                 .subscribe((res) => {
+    //                     this.city = res.results[0].components.city;
+    //                     this.state = res.results[0].components.state;
+    //                     console.log(res.results[0].components);
+    //                 });
+    //             console.log("position", position);
+    //         });
+    //     }
+    // }
 }

@@ -1,13 +1,19 @@
 import { Component, OnInit } from "@angular/core";
 import { StoreService } from "../_services/store.service";
+import { DataServiceService } from "../services/data-service.service";
 @Component({
     selector: "app-store-list",
     templateUrl: "./store-list.component.html",
     styleUrls: ["./store-list.component.css"],
 })
 export class StoreListComponent implements OnInit {
+    city;
+    state;
     storelist: any = [];
-    constructor(private _service: StoreService) {
+    constructor(
+        private _service: StoreService,
+        private dataService: DataServiceService
+    ) {
         this._service.getStoreList().subscribe(
             (res) => {
                 console.log(res);
@@ -19,5 +25,24 @@ export class StoreListComponent implements OnInit {
         );
     }
 
-    ngOnInit() {}
+    ngOnInit() {
+        this.geoLocation();
+    }
+    geoLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                this.dataService
+                    .getLocation(
+                        position.coords.latitude,
+                        position.coords.longitude
+                    )
+                    .subscribe((res) => {
+                        this.city = res.results[0].components.city;
+                        this.state = res.results[0].components.state;
+                        console.log(res.results[0].components);
+                    });
+                console.log("position", position);
+            });
+        }
+    }
 }
