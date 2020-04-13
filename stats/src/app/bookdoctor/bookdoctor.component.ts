@@ -17,6 +17,7 @@ export class BookdoctorComponent implements OnInit {
         address: "",
         symptoms: "",
     };
+    urlofmap;
     contactform: FormGroup;
     ngOnInit() {}
     constructor(private _service: StoreService) {
