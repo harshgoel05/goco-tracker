@@ -8,9 +8,7 @@ import { StoreRegestrtionComponent } from "./store-regestrtion/store-regestrtion
 import { LoginguardGuard } from "./doctorlogin/loginguard.guard";
 import { BookdoctorComponent } from "./bookdoctor/bookdoctor.component";
 import { StoreListComponent } from "./store-list/store-list.component";
-import { BedsComponent } from "./beds/beds.component";
 import { Error404Component } from "./error404/error404.component";
-import { MapsComponent } from "./maps/maps.component";
 import { WorldStatsComponent } from "./world-stats/world-stats.component";
 import { TeamPageComponent } from "./team-page/team-page.component";
 
@@ -26,8 +24,6 @@ const routes: Routes = [
     { path: "addStore", component: StoreRegestrtionComponent },
     { path: "consultDoctor", component: BookdoctorComponent },
     { path: "stores", component: StoreListComponent },
-    // { path: "beds", component: BedsComponent },
-    // { path: "maps", component: MapsComponent },
     { path: "worldstats", component: WorldStatsComponent },
     { path: "team", component: TeamPageComponent },
     { path: "**", component: Error404Component },
