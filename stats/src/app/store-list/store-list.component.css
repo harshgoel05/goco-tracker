@@ -43,7 +43,15 @@
 h2 {
     padding-bottom: 20px;
 }
-
+.cityInput{
+    width: 10em;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+}
+.citybutton{
+    color: white;
+    border-radius: 5px;
+}
 @media screen and (max-width: 1060px) {
     .main {
         background-image: url(../../assets/images/ipad-bg-1.png);

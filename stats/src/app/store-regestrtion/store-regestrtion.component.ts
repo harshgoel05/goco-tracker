@@ -18,8 +18,8 @@ export class StoreRegestrtionComponent implements OnInit {
     constructor(private _storeservice: StoreService) {}
 
     ngOnInit() {}
-    submitform() {
-        this._storeservice.addStore(this.store).subscribe(
+    submitform(form) {
+        this._storeservice.addStore(form.value).subscribe(
             (res) => {
                 // console.log("Added Sucessfully");
                 alert("Sucessfully added the store! Thank you.");
