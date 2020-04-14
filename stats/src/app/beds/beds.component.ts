@@ -17,7 +17,9 @@ export class BedsComponent implements OnInit {
             (res) => {
                 this.beds = res;
                 this.bedsarray = this.beds.regional;
-                this.bedsarray.sort((a, b) => (a.totalHospitals < b.totalHospitals) ? 1 : -1)
+                this.bedsarray.sort((a, b) =>
+                    a.totalHospitals < b.totalHospitals ? 1 : -1
+                );
             },
             (error) => {
                 console.log("Error while getting beds database", error);
