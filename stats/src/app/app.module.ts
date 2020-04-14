@@ -19,6 +19,7 @@ import { BedsComponent } from "./beds/beds.component";
 import { Error404Component } from "./error404/error404.component";
 import { WorldStatsComponent } from "./world-stats/world-stats.component";
 import { TeamPageComponent } from "./team-page/team-page.component";
+import { RecapComponent } from './recap/recap.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -35,6 +36,7 @@ import { TeamPageComponent } from "./team-page/team-page.component";
         Error404Component,
         WorldStatsComponent,
         TeamPageComponent,
+        RecapComponent,
     ],
     imports: [
         BrowserModule,
