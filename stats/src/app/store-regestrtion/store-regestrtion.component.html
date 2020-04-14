@@ -9,72 +9,79 @@
 			</h2>
 			<hr>
 			<div class="reg-form">
-				<form #storeregestration='ngForm' (ngSubmit)='storeregestration.form.valid && submitform(storeregestration)' novalidate>
-				<div class="form-row">
-					<div class="form-group col-sm-6">
-						<label for="storeName">Store Name</label>
-						<input type="text" class="form-control" name="name" [(ngModel)]="store.name" #name='ngModel' required>
-						<span class="text-danger"
-                                *ngIf="(name.touched || storeregestration.submitted) && name.errors?.required">
-                                Name is required
-                        </span>
+				<form #storeregestration='ngForm'
+					(ngSubmit)='storeregestration.form.valid && submitform(storeregestration)' novalidate>
+					<div class="form-row">
+						<div class="form-group col-sm-6">
+							<label for="storeName">Store Name</label>
+							<input type="text" class="form-control" name="name" [(ngModel)]="store.name" #name='ngModel'
+								required>
+							<span class="text-danger"
+								*ngIf="(name.touched || storeregestration.submitted) && name.errors?.required">
+								Name is required
+							</span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="owner">Owner's Name</label>
+							<input type="text" class="form-control" name="ownername" [(ngModel)]="store.ownername"
+								#ownername='ngModel' required>
+							<span class="text-danger"
+								*ngIf="(ownername.touched || storeregestration.submitted) && ownername.errors?.required">
+								OwnerName is required
+							</span>
+						</div>
 					</div>
-					<div class="form-group col-md-6">
-						<label for="owner">Owner's Name</label>
-						<input type="text" class="form-control"  name="ownername" [(ngModel)]="store.ownername" #ownername='ngModel' required>
-						<span class="text-danger"
-                                *ngIf="(ownername.touched || storeregestration.submitted) && ownername.errors?.required">
-                                OwnerName is required
-                        </span>
-					</div>
-				</div>
 
-				<div class="form-row">
-					<div class="form-group col-md-6">
-						<label for="catagory">Store Category</label>
-						<input type="text" class="form-control" name="category" [(ngModel)]="store.category" #category='ngModel' required>
-						<span class="text-danger"
-                                *ngIf="(category.touched || storeregestration.submitted) && category.errors?.required">
-                                Category is required
-                        </span>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="catagory">Store Category</label>
+							<input type="text" class="form-control" name="category" [(ngModel)]="store.category"
+								#category='ngModel' required>
+							<span class="text-danger"
+								*ngIf="(category.touched || storeregestration.submitted) && category.errors?.required">
+								Category is required
+							</span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="contact">Contact Number</label>
+							<input type="string" class="form-control" name="contactno" [(ngModel)]="store.contactno"
+								#contactno='ngModel' required>
+							<span class="text-danger"
+								*ngIf="(contactno.touched || storeregestration.submitted) && contactno.errors?.required">
+								Contact Number is required
+							</span>
+						</div>
 					</div>
-					<div class="form-group col-md-6">
-						<label for="contact">Contact Number</label>
-						<input type="string" class="form-control" name="contactno" [(ngModel)]="store.contactno" #contactno='ngModel' required>
-						<span class="text-danger"
-                                *ngIf="(contactno.touched || storeregestration.submitted) && contactno.errors?.required">
-                                Contact Number is required
-                        </span>
+					<div class="form-group">
+						<label for="inputAddress">Address</label>
+						<input type="text" class="form-control" name="address" [(ngModel)]="store.address"
+							placeholder="GoogleMap link of your store">
 					</div>
-				</div>
-				<div class="form-group">
-					<label for="inputAddress">Address</label>
-					<input type="text" class="form-control" name="address" [(ngModel)]="store.address"
-						placeholder="GoogleMap link of your store">
-				</div>
-				<div class="form-row">
-					<div class="form-group col-sm-6">
-						<label for="city">City</label>
-						<input type="text" class="form-control" name="city" [(ngModel)]="store.city" #city='ngModel' required>
-						<span class="text-danger"
-                                *ngIf="(city.touched || storeregestration.submitted) && city.errors?.required">
-                                City is required
-                        </span>
+					<div class="form-row">
+						<div class="form-group col-sm-6">
+							<label for="city">City</label>
+							<input type="text" class="form-control" name="city" [(ngModel)]="store.city" #city='ngModel'
+								required>
+							<span class="text-danger"
+								*ngIf="(city.touched || storeregestration.submitted) && city.errors?.required">
+								City is required
+							</span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="state">State</label>
+							<input type="text" class="form-control" name="state" [(ngModel)]="store.state"
+								#state='ngModel' required>
+							<span class="text-danger"
+								*ngIf="(state.touched || storeregestration.submitted) && state.errors?.required">
+								State is required
+							</span>
+						</div>
 					</div>
-					<div class="form-group col-md-6">
-						<label for="state">State</label>
-						<input type="text" class="form-control" name="state" [(ngModel)]="store.state" #state='ngModel' required>
-						<span class="text-danger"
-                                *ngIf="(state.touched || storeregestration.submitted) && state.errors?.required">
-                                State is required
-                        </span>
+					<div class="text-center">
+						<button style="margin-top: 10px; background-color: #f56133; border: 0ch; width: 30%;"
+							class="btn btn-primary" type="submit">Submit</button>
+						<!-- <span *ngIf="errormessage"></span>	 -->
 					</div>
-				</div>
-				<div class="text-center">
-					<button style="margin-top: 10px; background-color: #f56133; border: 0ch; width: 30%;"
-						class="btn btn-primary" type="submit">Submit</button>
-					<span *ngIf="errormessage"></span>	
-				</div>
 				</form>
 			</div>
 		</div>
