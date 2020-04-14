@@ -10,8 +10,8 @@ import {
 export class StoreService {
     constructor(private http: HttpClient) {}
     headers = new HttpHeaders().set("Content-Type", "application/json");
-    baseurl = "/api";
-    // baseurl = "http://localhost:3000/api";
+    // baseurl = "/api";
+    baseurl = "http://localhost:3000/api";
     addStore(data) {
         return this.http.post(this.baseurl + "/addstore", data);
     }
