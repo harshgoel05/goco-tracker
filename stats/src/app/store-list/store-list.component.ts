@@ -10,6 +10,8 @@ export class StoreListComponent implements OnInit {
     city;
     state;
     storelist: any = [];
+    entercity=false
+    newcity
     constructor(
         private _service: StoreService,
         private dataService: DataServiceService
@@ -39,10 +41,19 @@ export class StoreListComponent implements OnInit {
                     .subscribe((res) => {
                         this.city = res.results[0].components.city;
                         this.state = res.results[0].components.state;
+                        if(!this.city)
+                        {
+                            this.entercity=true
+                        }
+                        //console.log(this.city)
                         // console.log(res.results[0].components);
                     });
                 // console.log("position", position);
             });
         }
+    }
+    entercityname(){
+        this.city=this.newcity
+        this.entercity=false
     }
 }

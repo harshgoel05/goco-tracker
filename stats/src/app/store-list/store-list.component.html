@@ -6,7 +6,7 @@
     </div>
     <div class="middlebox">
       <h2 style="text-align: center; margin-top: 20px;"><span style="color: #f56133;">Stores</span> Near You</h2>
-      <h6 class="text-center">Your city : <span style="color: #f56133;">{{city}}</span></h6>
+      <h6 class="text-center">Your city : <span style="color: #f56133;">{{city}}?</span><span class="city" (click)="entercity=true" *ngIf="!entercity">Enter City</span><input class="cityInput" *ngIf="entercity" [(ngModel)]="newcity">&nbsp;<button class="cityButton" style="background-color: #f56133; border: 0ch;border-radius: 5px; color: white;width:5em;height:2.3em" *ngIf="entercity" (click)="entercityname()">Enter</button></h6>
       <table class="table table-striped">
         <thead>
           <tr>

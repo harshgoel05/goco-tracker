@@ -2,15 +2,15 @@
     <thead>
         <tr>
             <th scope="col">State</th>
-            <th scope="col">No of Beds</th>
             <th scope="col">No of Hospitals</th>
+            <th scope="col">No of Beds</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let p of bedsarray">
             <th scope="row">{{p.state}}</th>
-            <td>{{p.totalBeds}}</td>
             <td>{{p.totalHospitals}}</td>
+            <td>{{p.totalBeds}}</td>
         </tr>
     </tbody>
 </table>

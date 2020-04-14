@@ -115,6 +115,7 @@ export class WorldStatsComponent implements OnInit {
           // console.log(res);
           this.countrywiseData=res
           this.countrywiseData.reverse()
+          this.countrywiseData.sort((a, b) => (a.cases < b.cases) ? 1 : -1)
           
       });
   }
