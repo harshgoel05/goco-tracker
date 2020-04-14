@@ -28,6 +28,7 @@
     "highcharts": "^8.0.4",
     "jquery": "^3.4.1",
     "ng-chartjs": "^0.1.8",
+    "ng-recaptcha": "^5.0.0",
     "ng-worldmap": "^1.2.2",
     "ng2-charts": "^2.3.0",
     "ngx-bootstrap": "^5.6.1",
