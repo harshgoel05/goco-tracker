@@ -214,7 +214,7 @@ Routes.route("/covidIndiaNotifs").get((req, response) => {
 // WORLD DATA
 Routes.route("/covidWorld").get((req, response) => {
     try {
-        axios.get("https://corona.lmao.ninja/all").then((res) => {
+        axios.get("https://corona.lmao.ninja/v2/all").then((res) => {
             // console.log(res.data.data);
             response.status(200).send(res.data);
         });
@@ -226,10 +226,12 @@ Routes.route("/covidWorld").get((req, response) => {
 // World Data Country Wise
 Routes.route("/covidWorldCountryWise").get((req, response) => {
     try {
-        axios.get("https://corona.lmao.ninja/countries?sort=country").then((res) => {
-            // console.log(res.data.data);
-            response.status(200).send(res.data);
-        });
+        axios
+            .get("https://corona.lmao.ninja/v2/countries?sort=country")
+            .then((res) => {
+                // console.log(res.data.data);
+                response.status(200).send(res.data);
+            });
     } catch (err) {
         // console.error(err);
         response.status(500).send(err);
