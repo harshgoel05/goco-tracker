@@ -1,4 +1,8 @@
-# GoCoTracker :fa-heart:
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/harshgoel05/GoCo-Tracker)
+
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/harshgoel05/GoCo-Tracker)
+
+# GoCoTracker
 
 `Find the app at` :  [GoCoTracker](https://gocotracker.herokuapp.com/>)
 
