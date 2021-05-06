@@ -25,7 +25,7 @@
     "angular-highcharts": "^9.0.2",
     "chart.js": "^2.9.3",
     "d3-geomap": "^3.3.0",
-    "highcharts": "^8.0.4",
+    "highcharts": "^9.0.0",
     "jquery": "^3.4.1",
     "ng-chartjs": "^0.1.8",
     "ng-recaptcha": "^5.0.0",
