@@ -23,7 +23,7 @@
     "@syncfusion/ej2-angular-maps": "^18.1.43",
     "@types/googlemaps": "^3.39.3",
     "angular-highcharts": "^9.0.2",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "d3-geomap": "^3.3.0",
     "highcharts": "^8.0.4",
     "jquery": "^3.4.1",
