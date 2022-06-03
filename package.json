@@ -8,7 +8,7 @@
         "@angular/common": "8.2.14",
         "@angular/compiler": "8.2.14",
         "@angular/compiler-cli": "8.2.14",
-        "@angular/core": "8.2.14",
+        "@angular/core": "11.0.5",
         "axios": "^0.19.2",
         "body-parser": "^1.19.0",
         "cors": "^2.8.5",
